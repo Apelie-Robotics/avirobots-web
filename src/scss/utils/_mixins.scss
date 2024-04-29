@@ -1,0 +1,12 @@
+@mixin dflex($justify: space-between, $direction: column, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin dgrid($align: center, $justify: center) {
+  display: grid;
+  align-items: $align;
+  justify-items: $align;
+}
