@@ -1,0 +1,199 @@
+.nav {
+  display: none;
+  @include pc {
+    @include dflex(space-between, row);
+  }
+  width: 100%;
+  padding: 2% 5%;
+  &__Logo {
+    width: 10%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__LinkContainer {
+    width: 25%;
+    @include dflex(space-between, row);
+    position: relative;
+  }
+
+  &__Link {
+    color: map-get($colors, "dark");
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.1s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: map-get($colors, "light");
+    }
+    &--disabled {
+      color: map-get($colors, "dark");
+      text-decoration: none;
+      padding: 10px;
+      color: rgb(208, 208, 208);
+      cursor: default;
+    }
+  }
+
+  &__Sublink {
+    &Container {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      bottom: -198%;
+      background-color: rgba(0, 0, 0, 0.8);
+      @include dflex(space-evenly, column, start);
+      width: 20vw;
+      height: 200%;
+    }
+    width: 100%;
+    height: 50%;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: map-get($colors, "light");
+    &:hover {
+      background-color: rgb(245, 245, 245);
+      color: map-get($colors, "dark");
+    }
+  }
+}
+
+.mobileNav {
+  @include pc {
+    display: none;
+  }
+  @include dflex(space-between, row);
+  padding: 5%;
+
+  .mobileNav__Logo {
+    @include dflex(center, column, end);
+    width: 40%;
+    text-decoration: none;
+    img {
+      width: 100%;
+    }
+    span {
+      font-size: 0.6rem;
+      color: map-get($colors, "dark");
+    }
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70vw;
+    z-index: 2;
+    background-color: #171717f2;
+    border-top-right-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    &__Link {
+      color: map-get($colors, "light");
+      text-decoration: none;
+      width: 80%;
+      border-bottom: map-get($colors, "light") 1px solid;
+      padding: 10% 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &--Dropdown {
+        @include dflex(space-between, row);
+      }
+
+      &Container {
+        @include dflex();
+      }
+
+      &--Disabled {
+        cursor: default;
+        color: grey;
+      }
+    }
+
+    &__Sublink {
+      text-decoration: none;
+      background-color: rgb(187, 187, 187);
+      color: white;
+      width: 100%;
+      border-radius: 5% / 50%;
+      text-align: center;
+      padding: 2% 0;
+      transition: 0.1s;
+
+      &--Inactive {
+        background-color: rgba(255, 255, 255, 0);
+        visibility: hidden;
+        opacity: 0;
+        font-size: 0;
+        transition: visibility 0s, opacity 0.1s, font-size 0.1s;
+      }
+
+      &Container {
+        width: 80%;
+        margin-top: 10px;
+        @include dflex();
+        gap: 10px;
+        &--Inactive {
+          margin: 0;
+          gap: 0;
+          height: 0;
+        }
+      }
+    }
+
+    &__Button {
+      border: none;
+      font-size: 1.5rem;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0);
+      &--Open {
+        color: map-get($colors, "dark");
+        z-index: 1;
+      }
+      &--Close {
+        color: map-get($colors, "light");
+        width: 100%;
+        padding-left: 5vw;
+        margin-bottom: 10%;
+        @include dflex(start, row);
+      }
+    }
+
+    &__Bottom {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      @include dflex(space-between, row);
+      &Text {
+        color: map-get($colors, "light");
+        font-size: 0.6rem;
+        width: 50%;
+      }
+      &Logo {
+        width: 25%;
+      }
+    }
+  }
+
+  .menuMask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}

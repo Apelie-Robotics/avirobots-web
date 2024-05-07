@@ -1,0 +1,209 @@
+.home {
+  color: #343434;
+  .button {
+    &Pc {
+      display: none;
+    }
+
+    &--light {
+      @include dflex(space-between, row);
+      gap: 5px;
+
+      .arrow {
+        color: map-get($colors, "apelieOrange");
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .section1 {
+    .mobile {
+      padding: 0 2.5%;
+      .hero {
+        background-image: url(./assets/picture/chickensMobile.png);
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        h1 {
+          font-weight: 800;
+          font-size: 3rem;
+          color: white;
+          text-shadow: -2px 4px 7.3px rgba(0, 0, 0, 0.3);
+          padding: 0 5%;
+          padding-top: 15%;
+          line-height: 2.8rem;
+        }
+      }
+
+      .textContainer {
+        margin-top: 100px;
+        margin-bottom: 10vh;
+        padding: 0 5%;
+        @include dflex();
+        text-align: center;
+        gap: 15px;
+
+        .button {
+          text-decoration: underline;
+        }
+
+        .line {
+          margin-top: 35px;
+          border-bottom: map-get($colors, "apelieOrange") solid 2px;
+          width: 25vw;
+        }
+      }
+    }
+  }
+
+  .section2 {
+    @include dflex();
+    gap: 15px;
+    padding: 0 7.5%;
+    margin-bottom: 10vh;
+    h2 {
+      font-weight: 400;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .section3 {
+    background-color: #eeeeee;
+    padding: 5%;
+    h2 {
+      margin-bottom: 5vh;
+      font-weight: 400;
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .content {
+      @include dflex();
+      gap: 15px;
+      margin-bottom: 15vh;
+      h3 {
+        color: map-get($colors, "apelieOrange");
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .app {
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  .section4 {
+    margin: 15vh 0;
+    @include dflex();
+    gap: 50px;
+    h2 {
+      font-weight: 400;
+    }
+    .content {
+      @include dflex();
+      gap: 10px;
+      p {
+        text-align: center;
+        width: 80%;
+      }
+    }
+    .line {
+      width: 15%;
+      border-bottom: solid 2px map-get($colors, "apelieOrange");
+    }
+  }
+
+  .section5 {
+    @include dflex();
+    gap: 5vh;
+    margin-bottom: 15vh;
+    h2 {
+      font-weight: 400;
+    }
+  }
+
+  .section6 {
+    padding: 0 10%;
+    @include dflex();
+    gap: 5vh;
+    margin-bottom: 15vh;
+    h2 {
+      text-align: center;
+      a {
+        color: inherit;
+      }
+    }
+
+    .text {
+      p {
+        margin-bottom: 5vh;
+      }
+    }
+
+    .bootsContainer {
+      position: relative;
+
+      img {
+        width: 75%;
+      }
+      .button {
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        inset: 0;
+        left: 60%;
+      }
+    }
+  }
+
+  .section7 {
+    @include dflex();
+    gap: 5vh;
+    padding: 10vh 0;
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.133) 0%,
+        rgba(0, 0, 0, 0.693) 80%,
+        rgb(0, 0, 0) 100%
+      ),
+      url(./assets/picture/blueprints.png);
+    background-size: cover;
+
+    .content {
+      @include dflex();
+      .number {
+        font-size: 5rem;
+        line-height: 4.5rem;
+        font-weight: 800;
+        color: map-get($colors, "light");
+        letter-spacing: -5px;
+      }
+      .text {
+        color: map-get($colors, "light");
+        font-size: 1.5rem;
+      }
+    }
+    .line {
+      border-bottom: solid 2px map-get($colors, "apelieOrange");
+      width: 15%;
+    }
+  }
+
+  .section8 {
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+    h2 {
+      text-align: center;
+      margin-bottom: 10vh;
+      font-weight: 400;
+    }
+  }
+}
