@@ -2,6 +2,7 @@
 
 @import "base/reset", "base/typography";
 
-// @import "components/nav", "components/footer", "components/button";
+@import "components/nav", "components/footer", "components/button",
+  "components/carouselMobile", "components/carousel";
 
-// @import "pages/home", "pages/contact", "pages/aboutUs", "pages/error";
+@import "pages/home";
