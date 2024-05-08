@@ -31,11 +31,6 @@ const CarouselMobile = ({ images }) => {
     }
   };
 
-  const handleSideImgClick = (index) => {
-    if (index > currentImageIndex) setCurrentImageIndex(currentImageIndex + 1);
-    if (index < currentImageIndex) setCurrentImageIndex(currentImageIndex - 1);
-  };
-
   const classSelector = (index) => {
     if (index === currentImageIndex) return "active";
     if (index === currentImageIndex - 1) return "inactiveLeft";
@@ -47,7 +42,7 @@ const CarouselMobile = ({ images }) => {
 
   return (
     <div
-      className="carouselContainer"
+      className="carouselContainerMobile"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={() => setStartX(null)}
@@ -59,7 +54,7 @@ const CarouselMobile = ({ images }) => {
             alt={`carousel-img-${index}`}
             key={index}
             className={`${classSelector(index)}`}
-            onClick={() => handleSideImgClick(index)}
+            onClick={() => setCurrentImageIndex(index)}
           />
         ))}
       </div>

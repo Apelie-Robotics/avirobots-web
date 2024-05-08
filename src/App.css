@@ -26,7 +26,10 @@
   }
 }
 .nav__Logo {
-  width: 10%;
+  width: 20%;
+  color: black;
+  text-decoration: none;
+  font-size: 0.8rem;
 }
 .nav__Logo img {
   width: 100%;
@@ -306,7 +309,7 @@ footer .secondaryContainer p {
   }
 }
 .button {
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   text-decoration: none;
   padding: 9px 18px;
   font-size: 0.8rem;
@@ -329,57 +332,146 @@ footer .secondaryContainer p {
   padding: 9px;
 }
 
-.carouselContainer {
+.carouselContainerMobile {
   width: 100%;
   height: 80vw;
   padding-top: 2.5vw;
   overflow: hidden;
 }
-.carouselContainer .carouselWrapper {
+.carouselContainerMobile .carouselWrapper {
   display: flex;
   position: relative;
 }
-.carouselContainer .carouselWrapper img {
+.carouselContainerMobile .carouselWrapper img {
   transition: left 0.3s ease, right 0.3s ease, top 0.3s ease, height 0.3s ease;
   position: absolute;
   object-fit: cover;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.28);
 }
-.carouselContainer .carouselWrapper .active {
+.carouselContainerMobile .carouselWrapper .active {
   height: 75vw;
   max-width: 75%;
   left: 15vw;
   z-index: 2;
   top: 0;
 }
-.carouselContainer .carouselWrapper .inactiveLeft,
-.carouselContainer .carouselWrapper .inactiveRight {
+.carouselContainerMobile .carouselWrapper .inactiveLeft,
+.carouselContainerMobile .carouselWrapper .inactiveRight {
   height: 50vw;
   max-width: 50%;
   z-index: 1;
   top: 5vh;
 }
-.carouselContainer .carouselWrapper .inactiveLeft {
+.carouselContainerMobile .carouselWrapper .inactiveLeft {
   left: 2.5%;
 }
-.carouselContainer .carouselWrapper .inactiveRight {
+.carouselContainerMobile .carouselWrapper .inactiveRight {
   left: 47.5%;
 }
-.carouselContainer .carouselWrapper .secondInactiveRight,
-.carouselContainer .carouselWrapper .secondInactiveLeft {
+.carouselContainerMobile .carouselWrapper .secondInactiveRight,
+.carouselContainerMobile .carouselWrapper .secondInactiveLeft {
   height: 30vw;
   max-width: 30%;
   z-index: 0;
   top: 10vh;
 }
-.carouselContainer .carouselWrapper .secondInactiveLeft {
+.carouselContainerMobile .carouselWrapper .secondInactiveLeft {
   left: -15vw;
 }
-.carouselContainer .carouselWrapper .secondInactiveRight {
+.carouselContainerMobile .carouselWrapper .secondInactiveRight {
   left: calc(100% - 15vw);
 }
-.carouselContainer .carouselWrapper .inactive {
+.carouselContainerMobile .carouselWrapper .inactive {
   width: 0;
+}
+@media (min-width: 768px) {
+  .carouselContainerMobile {
+    display: none;
+  }
+}
+
+.carouselAndBtnContainer {
+  display: none;
+}
+@media (min-width: 768px) {
+  .carouselAndBtnContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+  }
+  .carouselAndBtnContainer button {
+    width: 5vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  .carouselAndBtnContainer .carouselContainer {
+    width: 80vw;
+    height: 40vw;
+    overflow: hidden;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper {
+    display: flex;
+    position: relative;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper img {
+    transition: left 0.3s ease, right 0.3s ease, top 0.3s ease, height 0.3s ease;
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.28);
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .active {
+    height: 35vw;
+    max-width: 35vw;
+    left: 22.5vw;
+    z-index: 3;
+    top: 2.5vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .inactiveLeft,
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .inactiveRight {
+    height: 30vw;
+    max-width: 30vw;
+    z-index: 2;
+    top: 5vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .inactiveLeft {
+    left: 15vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .inactiveRight {
+    left: 35vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .secondInactiveRight,
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .secondInactiveLeft {
+    height: 25vw;
+    max-width: 25vw;
+    z-index: 1;
+    top: 7.5vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .secondInactiveLeft {
+    left: 7.5vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .secondInactiveRight {
+    left: 47.5vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .thirdInactiveRight,
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .thirdInactiveLeft {
+    height: 20vw;
+    max-width: 20vw;
+    z-index: 0;
+    top: 10vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .thirdInactiveLeft {
+    left: 0;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .thirdInactiveRight {
+    left: 60vw;
+  }
+  .carouselAndBtnContainer .carouselContainer .carouselWrapper .inactive {
+    width: 0;
+  }
 }
 
 .home {
@@ -398,6 +490,9 @@ footer .secondaryContainer p {
 .home .button--light .arrow {
   color: #ff964d;
   font-size: 1rem;
+}
+.home .section1 .pc {
+  display: none;
 }
 .home .section1 .mobile {
   padding: 0 2.5%;
@@ -451,9 +546,13 @@ footer .secondaryContainer p {
 .home .section2 h2 span {
   font-weight: 700;
 }
+.home .section2 video,
+.home .section2 .ownership {
+  display: none;
+}
 .home .section3 {
   background-color: #eeeeee;
-  padding: 5%;
+  padding: 10% 5%;
 }
 .home .section3 h2 {
   margin-bottom: 5vh;
@@ -476,32 +575,41 @@ footer .secondaryContainer p {
 .home .section3 .content img {
   width: 100%;
 }
+.home .section3 .app {
+  margin-bottom: 0;
+}
 .home .section3 .app img {
   width: 50%;
 }
 .home .section4 {
   margin: 15vh 0;
+}
+.home .section4 h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.home .section4 .contentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
 }
-.home .section4 h2 {
+.home .section4 .contentContainer h2 {
   font-weight: 400;
 }
-.home .section4 .content {
+.home .section4 .contentContainer .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
-.home .section4 .content p {
+.home .section4 .contentContainer .content p {
   text-align: center;
   width: 80%;
 }
-.home .section4 .line {
+.home .section4 .contentContainer .line {
   width: 15%;
   border-bottom: solid 2px #ff964d;
 }
@@ -516,7 +624,13 @@ footer .secondaryContainer p {
 .home .section5 h2 {
   font-weight: 400;
 }
-.home .section6 {
+.home .section5 .validation {
+  display: none;
+}
+.home .section5 .references {
+  display: none;
+}
+.home .section6 .mobile {
   padding: 0 10%;
   display: flex;
   flex-direction: column;
@@ -525,29 +639,39 @@ footer .secondaryContainer p {
   gap: 5vh;
   margin-bottom: 15vh;
 }
-.home .section6 h2 {
+.home .section6 .mobile h2 {
   text-align: center;
 }
-.home .section6 h2 a {
+.home .section6 .mobile h2 a {
   color: inherit;
 }
-.home .section6 .text p {
+.home .section6 .mobile .text p {
   margin-bottom: 5vh;
 }
-.home .section6 .bootsContainer {
+.home .section6 .mobile .bootsContainer {
   position: relative;
 }
-.home .section6 .bootsContainer img {
+.home .section6 .mobile .bootsContainer img {
   width: 75%;
 }
-.home .section6 .bootsContainer .button {
+.home .section6 .mobile .bootsContainer .button {
   height: fit-content;
   width: fit-content;
   position: absolute;
   inset: 0;
   left: 60%;
 }
+.home .section6 .pc {
+  display: none;
+}
 .home .section7 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.133) 0%, rgba(0, 0, 0, 0.693) 80%, rgb(0, 0, 0) 100%), url(./assets/picture/blueprintsMobile.png);
+  background-size: cover;
+}
+.home .section7 p {
+  display: none;
+}
+.home .section7 .contentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -555,27 +679,25 @@ footer .secondaryContainer p {
   gap: 5vh;
   padding: 10vh 0;
   position: relative;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.133) 0%, rgba(0, 0, 0, 0.693) 80%, rgb(0, 0, 0) 100%), url(./assets/picture/blueprints.png);
-  background-size: cover;
 }
-.home .section7 .content {
+.home .section7 .contentContainer .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-.home .section7 .content .number {
+.home .section7 .contentContainer .content .number {
   font-size: 5rem;
   line-height: 4.5rem;
   font-weight: 800;
   color: white;
   letter-spacing: -5px;
 }
-.home .section7 .content .text {
+.home .section7 .contentContainer .content .text {
   color: white;
   font-size: 1.5rem;
 }
-.home .section7 .line {
+.home .section7 .contentContainer .line {
   border-bottom: solid 2px #ff964d;
   width: 15%;
 }
@@ -587,6 +709,349 @@ footer .secondaryContainer p {
   text-align: center;
   margin-bottom: 10vh;
   font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .home .section1 .mobile {
+    display: none;
+  }
+  .home .section1 .pc {
+    display: block;
+  }
+  .home .section1 .pc .heroCarousel {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+    width: 100vw;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide {
+    height: 85vh;
+    width: 100vw;
+    position: relative;
+    display: inline-flex;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide1::before {
+    content: "";
+    background: linear-gradient(90deg, rgb(0, 0, 0) 10%, rgba(235, 239, 246, 0) 30%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide1 .heroImg {
+    margin-left: 10%;
+    height: 100%;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide1 h1 {
+    width: fit-content;
+    position: absolute;
+    inset: 0;
+    left: 5%;
+    top: 10%;
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 3.75rem;
+    color: white;
+    text-shadow: -2px 4px 7.3px rgba(0, 0, 0, 0.3);
+    height: fit-content;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide1 .textContainer {
+    white-space: wrap;
+    position: absolute;
+    inset: 0;
+    left: 5%;
+    width: 23%;
+    top: 65%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    gap: 15px;
+    font-size: 0.75rem;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide1 .poultryArticle {
+    position: absolute;
+    inset: 0;
+    height: 75%;
+    top: 40%;
+    left: 25%;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide1 .button {
+    position: absolute;
+    inset: 0;
+    top: 75%;
+    left: 75%;
+    padding: 9px 30px;
+    text-decoration: underline;
+    width: fit-content;
+    height: fit-content;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide2 {
+    position: absolute;
+    background-color: white;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide2 .heroImg {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    filter: brightness(30%);
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide2 h2 {
+    position: absolute;
+    inset: 0;
+    top: 20%;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+  }
+  .home .section1 .pc .heroCarousel .carouselInner .slide2 .robotAndApp {
+    position: absolute;
+    inset: 0;
+    height: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+  }
+  .home .section1 .pc .heroCarousel .buttonsContainer {
+    position: absolute;
+    padding: 0 1%;
+    inset: 0;
+    top: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+  }
+  .home .section1 .pc .heroCarousel .buttonsContainer .carouselButton {
+    border: none;
+    background: none;
+    font-size: 2rem;
+  }
+  .home .section1 .pc .heroCarousel .buttonsContainer .active {
+    cursor: pointer;
+    color: white;
+  }
+  .home .section1 .pc .heroCarousel .buttonsContainer .inactive {
+    color: grey;
+  }
+  .home .section1 .pc .heroCarousel .dotContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh 0;
+    font-size: 1.5rem;
+  }
+  .home .section2 {
+    padding: 0;
+    position: relative;
+  }
+  .home .section2 video {
+    display: block;
+    width: 100%;
+  }
+  .home .section2 .textContainer {
+    position: absolute;
+    color: white;
+    text-align: start;
+    inset: 0;
+    padding: 5% 10%;
+    width: 60%;
+  }
+  .home .section2 .textContainer p {
+    width: 60%;
+  }
+  .home .section2 .ownership {
+    display: inline;
+    position: absolute;
+    inset: 0;
+    top: 90%;
+    left: 80%;
+    color: grey;
+  }
+  .home .section3 {
+    padding: 5%;
+  }
+  .home .section3 h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .home .section3 h2 br {
+    display: none;
+  }
+  .home .section3 .contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 10%;
+  }
+  .home .section3 .contentContainer .content {
+    margin: 0;
+    gap: 25px;
+  }
+  .home .section3 .contentContainer .content img {
+    height: 35vh;
+    width: auto;
+  }
+  .home .section3 .contentContainer .content .robotImg {
+    transform: scaleX(-1);
+  }
+  .home .section3 .contentContainer .content p {
+    text-align: center;
+  }
+  .home .section4 .contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    padding: 0 10%;
+    gap: 2.5%;
+    width: 100%;
+  }
+  .home .section4 .contentContainer .content {
+    width: 25%;
+  }
+  .home .section4 .contentContainer .content img {
+    height: 25vh;
+  }
+  .home .section4 .contentContainer .line {
+    border-bottom: none;
+    width: 0;
+    height: 50px;
+    border-left: solid 2px #ff964d;
+    margin-top: calc(12.5vh - 25px);
+  }
+  .home .section5 {
+    padding: 0 15%;
+    gap: 0;
+  }
+  .home .section5 h2 {
+    margin-bottom: 10vh;
+  }
+  .home .section5 .validationMobile {
+    display: none;
+  }
+  .home .section5 .validation {
+    display: inline;
+    width: 100%;
+  }
+  .home .section5 .references {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 30px;
+    width: 100%;
+    gap: 25px;
+  }
+  .home .section5 .references .reference {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+  }
+  .home .section5 .references .reference .square {
+    width: 1rem;
+    height: 1rem;
+  }
+  .home .section5 .references .reference .orange {
+    background-color: #ff964d;
+  }
+  .home .section5 .references .reference .purple {
+    background-color: #3f5199;
+  }
+  .home .section6 .mobile {
+    display: none;
+  }
+  .home .section6 .pc {
+    background-color: #eeeeee;
+    padding: 10vh 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  .home .section6 .pc .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vh;
+    width: 150%;
+  }
+  .home .section6 .pc .content h2 {
+    text-align: center;
+  }
+  .home .section6 .pc .content h2 a {
+    color: black;
+  }
+  .home .section6 .pc .content .text {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  .home .section6 .pc .content .text .column {
+    width: 50%;
+  }
+  .home .section6 .pc .content .button {
+    padding: 9px 35px;
+  }
+  .home .section6 .pc img {
+    align-self: end;
+    width: 50%;
+  }
+  .home .section7 {
+    background-image: url(./assets/picture/blueprints.jpg);
+    padding: 35vh 0;
+  }
+  .home .section7 p {
+    display: block;
+  }
+  .home .section7 .contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .section7 .contentContainer .line {
+    border-bottom: none;
+    width: 0;
+    height: 50px;
+    border-left: 2px solid #ff964d;
+  }
+  .home .section7 .contentContainer .content span {
+    text-align: center;
+  }
+  .home .section7 p {
+    color: white;
+    text-align: center;
+  }
+  .home .section8 {
+    padding-bottom: 10vh;
+  }
+  .home .section8 h2 {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

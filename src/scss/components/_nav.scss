@@ -6,10 +6,13 @@
   width: 100%;
   padding: 2% 5%;
   &__Logo {
-    width: 10%;
+    width: 20%;
     img {
       width: 100%;
     }
+    color: map-get($colors, "dark");
+    text-decoration: none;
+    font-size: 0.8rem;
   }
 
   &__LinkContainer {
