@@ -1,0 +1,6 @@
+.errorPage {
+  height: 80vh;
+  @include dflex(center);
+  gap: 20px;
+  text-align: center;
+}
