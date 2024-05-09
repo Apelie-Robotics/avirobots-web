@@ -1,0 +1,89 @@
+.contactPage {
+  background-image: url(./assets/picture/apelieOfficeMobile.jpg);
+  background-size: cover;
+  height: 100vh;
+  @include dflex(center);
+
+  .contactFormContainer {
+    background-color: map-get($colors, "light");
+    width: 80%;
+    padding: 5%;
+    border-radius: 0.75rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .line {
+      border-bottom: 2px solid map-get($colors, "apeliePink");
+      width: 15%;
+      margin: 5% 0;
+    }
+
+    .contactForm {
+      .inputContainer {
+        font-size: 0.8rem;
+        @include dflex(space-between, column, start);
+        margin: 3vh 0;
+        gap: 5px;
+
+        input,
+        textarea {
+          width: 100%;
+          background-color: #d9d9d9;
+          border: none;
+          padding: 5px;
+        }
+
+        textarea {
+          height: 15vh;
+        }
+      }
+    }
+  }
+}
+
+@include pc {
+  .contactPage {
+    height: auto;
+    padding: 20vh 0;
+    background-image: url(./assets/picture/apelieOffice.jpg);
+    background-size: cover;
+
+    .contactForm {
+      @include dgrid();
+      grid-template:
+        "name email" auto
+        "phone country" auto
+        "message message" auto
+        "submit submit" auto
+        / 1fr 1fr;
+      column-gap: 5vw;
+      .name {
+        grid-area: name;
+      }
+      .email {
+        grid-area: email;
+      }
+      .phone {
+        grid-area: phone;
+      }
+      .country {
+        grid-area: country;
+      }
+      .message {
+        grid-area: message;
+        textarea {
+          height: 25vh;
+        }
+      }
+      .button {
+        grid-area: submit;
+        justify-self: self-start;
+      }
+      .inputContainer {
+        width: 100%;
+      }
+    }
+  }
+}

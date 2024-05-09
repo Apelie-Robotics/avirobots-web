@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTransition, animated } from "@react-spring/web";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import avisenseLOGO from "../../assets/logo/avisenseLOGO.png";
-import ApelieISOLOGOWHITE from "../../assets/logo/avisenseISOLOGOWHITE.png";
+import avisenseLOGO from "/assets/logo/avisenseLOGO.png";
+import ApelieISOLOGOWHITE from "/assets/logo/ApelieISOLOGOWHITE.png";
 
 const MobileNavBar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -31,6 +31,9 @@ const MobileNavBar = () => {
       </button>
       <Link to="/" className="mobileNav__Logo">
         <img src={avisenseLOGO} alt="Logo"></img>
+        <span>
+          <i>by Apelie Robotics</i>
+        </span>
       </Link>
       {menuTransition(
         (style, item) =>
@@ -45,18 +48,25 @@ const MobileNavBar = () => {
                 </button>
 
                 <Link
+                  to="/"
+                  className="mobileMenu__Link"
+                  onClick={clickToggler}
+                >
+                  Home
+                </Link>
+                <Link
                   to="/us"
                   className="mobileMenu__Link"
                   onClick={clickToggler}
                 >
-                  Team
+                  About us
                 </Link>
                 <Link
                   to="/contact"
                   className="mobileMenu__Link"
                   onClick={clickToggler}
                 >
-                  Contact
+                  Contact us
                 </Link>
               </div>
               <div className="mobileMenu__Bottom">

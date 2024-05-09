@@ -1,0 +1,26 @@
+.button {
+  border-radius: 0.5rem;
+  text-decoration: none;
+  padding: 9px 18px;
+  font-size: 0.8rem;
+  transition: 0.1s;
+  cursor: pointer;
+  color: map-get($colors, "light");
+
+  &--solid {
+    background-color: map-get($colors, "apelieOrange");
+    border: solid 2px map-get($colors, "apelieOrange");
+
+    &:hover {
+      background-color: map-get($colors, "light");
+      color: map-get($colors, "apelieOrange");
+    }
+  }
+
+  &--light {
+    background-color: map-get($colors, "light");
+    border: solid 2px map-get($colors, "apelieOrange");
+    color: map-get($colors, "dark");
+    padding: 9px;
+  }
+}
