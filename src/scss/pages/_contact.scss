@@ -1,5 +1,5 @@
 .contactPage {
-  background-image: url(./assets/picture/apelieOfficeMobile.jpg);
+  background-image: url(/assets/picture/apelieOfficeMobile.jpg);
   background-size: cover;
   height: 100vh;
   @include dflex(center);
@@ -47,7 +47,7 @@
   .contactPage {
     height: auto;
     padding: 20vh 0;
-    background-image: url(./assets/picture/apelieOffice.jpg);
+    background-image: url(/assets/picture/apelieOffice.jpg);
     background-size: cover;
 
     .contactForm {

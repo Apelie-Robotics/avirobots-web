@@ -498,7 +498,7 @@ footer .secondaryContainer p {
   padding: 0 2.5%;
 }
 .home .section1 .mobile .hero {
-  background-image: url(./assets/picture/chickensMobile.png);
+  background-image: url(/assets/picture/chickensMobile.png);
   background-size: cover;
   background-position: center;
   height: 50vh;
@@ -665,7 +665,7 @@ footer .secondaryContainer p {
   display: none;
 }
 .home .section7 {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.133) 0%, rgba(0, 0, 0, 0.693) 80%, rgb(0, 0, 0) 100%), url(./assets/picture/blueprintsMobile.png);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.133) 0%, rgba(0, 0, 0, 0.693) 80%, rgb(0, 0, 0) 100%), url(/assets/picture/blueprintsMobile.png);
   background-size: cover;
 }
 .home .section7 p {
@@ -1021,7 +1021,7 @@ footer .secondaryContainer p {
     width: 50%;
   }
   .home .section7 {
-    background-image: url(./assets/picture/blueprints.jpg);
+    background-image: url(/assets/picture/blueprints.jpg);
     padding: 35vh 0;
   }
   .home .section7 p {
@@ -1190,7 +1190,7 @@ footer .secondaryContainer p {
   }
 }
 .contactPage {
-  background-image: url(./assets/picture/apelieOfficeMobile.jpg);
+  background-image: url(/assets/picture/apelieOfficeMobile.jpg);
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -1236,7 +1236,7 @@ footer .secondaryContainer p {
   .contactPage {
     height: auto;
     padding: 20vh 0;
-    background-image: url(./assets/picture/apelieOffice.jpg);
+    background-image: url(/assets/picture/apelieOffice.jpg);
     background-size: cover;
   }
   .contactPage .contactForm {

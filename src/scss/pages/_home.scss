@@ -24,7 +24,7 @@
     .mobile {
       padding: 0 2.5%;
       .hero {
-        background-image: url(./assets/picture/chickensMobile.png);
+        background-image: url(/assets/picture/chickensMobile.png);
         background-size: cover;
         background-position: center;
         height: 50vh;
@@ -197,7 +197,7 @@
         rgba(0, 0, 0, 0.693) 80%,
         rgb(0, 0, 0) 100%
       ),
-      url(./assets/picture/blueprintsMobile.png);
+      url(/assets/picture/blueprintsMobile.png);
     background-size: cover;
 
     p {
@@ -560,7 +560,7 @@
     }
 
     .section7 {
-      background-image: url(./assets/picture/blueprints.jpg);
+      background-image: url(/assets/picture/blueprints.jpg);
       padding: 35vh 0;
 
       p {
