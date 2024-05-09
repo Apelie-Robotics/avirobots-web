@@ -48,18 +48,25 @@ const MobileNavBar = () => {
                 </button>
 
                 <Link
+                  to="/"
+                  className="mobileMenu__Link"
+                  onClick={clickToggler}
+                >
+                  Home
+                </Link>
+                <Link
                   to="/us"
                   className="mobileMenu__Link"
                   onClick={clickToggler}
                 >
-                  Team
+                  About us
                 </Link>
                 <Link
                   to="/contact"
                   className="mobileMenu__Link"
                   onClick={clickToggler}
                 >
-                  Contact
+                  Contact us
                 </Link>
               </div>
               <div className="mobileMenu__Bottom">

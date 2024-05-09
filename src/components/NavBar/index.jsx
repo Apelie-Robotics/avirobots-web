@@ -14,11 +14,14 @@ const NavBar = () => {
           </span>
         </Link>
         <div className="nav__LinkContainer">
+          <NavLink to="/" className="nav__Link">
+            Home
+          </NavLink>
           <NavLink to="/us" className="nav__Link">
-            Team
+            About us
           </NavLink>
           <NavLink to="/contact" className="nav__Link">
-            Contact
+            Contact us
           </NavLink>
         </div>
       </nav>
