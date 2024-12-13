@@ -14,22 +14,23 @@ const AboutUs = () => {
         <img src={teamPhoto} alt="Team photo" className="teamPhoto" />
       </div>
       <div className="section1">
-        <img src={apelieLogo} alt="Apelie logo" />
-        <p>
-          We are a group of enthusiasts composed of engineers, developers,
-          designers, architects and makers,{" "}
+        <p className="firstp">
+          Robotics will have a positive impact on the poultry sector, and we are committed to
+          improving the lives of producers, animals, and consumers.<br />
           <b>
-            which firmly believe in robotics as the future of tedious and
-            dangerous tasks
+            We live in the era of precision agriculture, where technology boosts yields, respects animal
+            welfare, and optimizes resources.
           </b>
           .
         </p>
-        <p>
-          <b>We want to revolutionize</b> those industries in which people can
-          and must have the support of a friendly robot.
+        <p className="secondp">
+          <b>Our robots increase productivity, enhance biosecurity by reducing the risk of
+            cross-contamination, and address the growing labor shortage in production, ensuring
+            continuity and sustainability.</b>
         </p>
         <p className="weAre">
-          <i>We are Apelie Robotics.</i>
+          <i>Avirobots is a spinoff of Appelie Robotics dedicated to implementing robots in broiler and
+            layer farming.</i>
         </p>
       </div>
       <div className="section2">
@@ -44,34 +45,7 @@ const AboutUs = () => {
           <i>Visit apelie.com</i>
         </a>
       </div>
-      <div className="section3">
-        <h2 className="titleMobile">Our Story</h2>
-        <img src={boardPhoto} alt="Founders photo" />
-        <div className="text">
-          <h2 className="title">Our story</h2>
-          <p>
-            <b>Apelie Robotics' origins are back to 2019</b>, when our{" "}
-            <b>CEO, Arch. Lucas Jagodnik</b>, decided to build a robot for one
-            of his companies. This robot was meant to demolish an 8 story
-            building in two months. The goal was achieved and a dream began.
-          </p>
-          <p>
-            At first, we were a bunch of curious people doing research and
-            testing.{" "}
-            <b>
-              As the year went by, we consolidated our team and developed 3
-              parallel projects in which we developed prototypes and
-              validations.
-            </b>
-            <br />
-            This brought us a wealth of experience and know-how which we
-            nowadays apply in every project and solution we offer.
-            <br />
-            <b>Not only do we focus in robotics, but also in AI</b> processes
-            and data analysis to provide whole picture solutions.
-          </p>
-        </div>
-      </div>
+   
       <div className="section4">
         <img src={aboutUs1} alt="Apelie logo" />
         <img src={aboutUs2} alt="Apelie robots" />

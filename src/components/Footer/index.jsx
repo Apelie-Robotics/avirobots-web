@@ -1,3 +1,5 @@
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import ApelieLOGO from "/assets/logo/ApelieLOGO.png";
 
 const Footer = () => {
@@ -5,10 +7,11 @@ const Footer = () => {
     <footer>
       <div className="mainContainer">
         <div className="leftContainer">
+        <p>Avirobots by</p>
           <img src={ApelieLOGO} alt="Logo"></img>
-          <a href="/contact" className="button">
+          <Link to="/contact" className="button" onClick={() => window.scrollTo(0, 0)}>
             Suscribe
-          </a>
+          </Link>
           <div>
             <p className="primaryText">Suscribe to our newsletter</p>
             <p className="secondaryText">
@@ -26,7 +29,7 @@ const Footer = () => {
           >
             LinkedIn
           </a>
-          <a href="/contact">Contact</a>
+          <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
           <a
             href="https://www.linkedin.com/company/apelie-robotics/jobs/"
             target="_blank"
@@ -36,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="secondaryContainer">
-        <p>Av. La Voz del Interior 7000 - Córdoba, Argentina</p>
+        <p>Johns Creek, Georgia USA</p>
       </div>
     </footer>
   );

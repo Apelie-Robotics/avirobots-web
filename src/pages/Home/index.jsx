@@ -1,3 +1,4 @@
+import React from "react";
 import poultryScienceMobile from "/assets/picture/poultryScienceMobile.png";
 import robot from "/assets/picture/robot.png";
 import app from "/assets/picture/app.png";
@@ -27,6 +28,7 @@ import { RxDot, RxDotFilled } from "react-icons/rx";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 import avisenseVideo from "/assets/video/avisense.mp4";
 import poultryScience2 from "/assets/picture/poultryScience2.png";
+import { Link, NavLink } from "react-router-dom";
 
 const Home = () => {
   const [heroSlide, setHeroSlide] = useState(0);
@@ -59,12 +61,12 @@ const Home = () => {
           <div className="textContainer">
             <p>
               While we have made big progress in genetics, climate control and
-              nutrition <b>we forgot about the soil</b>.
+              nutrition <br/> <b>we forgot about the soil</b>.
             </p>
-            <p>
-              It's time to focus on improving their litter. <br />{" "}
+            <p>It's time to focus on improving their litter. <br/>{" "}
+            
               <b>
-                <i>We've created a cost-effective robot for that.</i>
+              <i>We've created a cost-effective robot for that.</i>
               </b>
             </p>
             <a

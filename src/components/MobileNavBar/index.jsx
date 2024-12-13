@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTransition, animated } from "@react-spring/web";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import avisenseLOGO from "/assets/logo/avisenseLOGO.png";
+import avisenseLOGO from "/assets/logo/LOGOS-01.png";
 import ApelieISOLOGOWHITE from "/assets/logo/ApelieISOLOGOWHITE.png";
 
 const MobileNavBar = () => {
@@ -71,8 +71,7 @@ const MobileNavBar = () => {
               </div>
               <div className="mobileMenu__Bottom">
                 <span className="mobileMenu__BottomText">
-                  Córdoba - Av La Voz del Interior 7000 Ciudad Empresarial,
-                  X5000 Córdoba
+                  Johns Creek, Georgia USA
                 </span>
                 <img
                   src={ApelieISOLOGOWHITE}
