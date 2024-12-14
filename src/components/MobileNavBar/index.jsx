@@ -1,25 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTransition, animated } from "@react-spring/web";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import avisenseLOGO from "/assets/logo/LOGOS-01.png";
-import ApelieISOLOGOWHITE from "/assets/logo/ApelieISOLOGOWHITE.png";
+import ApelieISOLOGO from "/assets/logo/apelieISOLOGO.png";
 
 const MobileNavBar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const clickToggler = () => setMenuToggle(!menuToggle);
-
-  const menuTransition = useTransition(menuToggle, {
-    from: { transform: "translateX(-100%)" },
-    enter: { transform: "translateX(0%)" },
-    leave: { transform: "translateX(-100%)" },
-  });
-
-  const maskTransition = useTransition(menuToggle, {
-    from: { opacity: 0 },
-    enter: { opacity: 0.65 },
-    leave: { opacity: 0 },
-  });
 
   return (
     <nav className="mobileNav">
@@ -31,67 +18,59 @@ const MobileNavBar = () => {
       </button>
       <Link to="/" className="mobileNav__Logo">
         <img src={avisenseLOGO} alt="Logo"></img>
-        <span>
+        {/* <span>
           <i>by Apelie Robotics</i>
-        </span>
+        </span> */}
       </Link>
-      {menuTransition(
-        (style, item) =>
-          item && (
-            <animated.div style={style} className="mobileMenu">
-              <div className="mobileMenu__LinkContainer">
-                <button
-                  onClick={clickToggler}
-                  className="mobileMenu__Button mobileMenu__Button--Close"
-                >
-                  <AiOutlineClose />
-                </button>
+      <div className={`mobileMenu ${menuToggle ? "" : "mobileMenu--closed"}`}>
+        <div className="mobileMenu__LinkContainer">
+          <button
+            onClick={clickToggler}
+            className="mobileMenu__Button mobileMenu__Button--Close"
+          >
+            <AiOutlineClose />
+          </button>
 
-                <Link
-                  to="/"
-                  className="mobileMenu__Link"
-                  onClick={clickToggler}
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/us"
-                  className="mobileMenu__Link"
-                  onClick={clickToggler}
-                >
-                  About us
-                </Link>
-                <Link
-                  to="/contact"
-                  className="mobileMenu__Link"
-                  onClick={clickToggler}
-                >
-                  Contact us
-                </Link>
-              </div>
-              <div className="mobileMenu__Bottom">
-                <span className="mobileMenu__BottomText">
-                  Johns Creek, Georgia USA
-                </span>
-                <img
-                  src={ApelieISOLOGOWHITE}
-                  alt="Logo"
-                  className="mobileMenu__BottomLogo"
-                ></img>
-              </div>
-            </animated.div>
-          )
-      )}
-      {maskTransition(
-        (style, item) =>
-          item && (
-            <animated.div
-              style={style}
-              className="menuMask"
-              onClick={clickToggler}
-            />
-          )
-      )}
+          <Link to="/" className="mobileMenu__Link" onClick={clickToggler}>
+            Home
+          </Link>
+          <Link
+            to="/#solution"
+            className="mobileMenu__Link"
+            onClick={clickToggler}
+          >
+            Our solution
+          </Link>
+          <Link to="/us" className="mobileMenu__Link" onClick={clickToggler}>
+            About us
+          </Link>
+          <Link
+            to="/contact"
+            className="mobileMenu__Link"
+            onClick={clickToggler}
+          >
+            Contact us
+          </Link>
+          <Link
+            to="/#trial"
+            className="mobileMenu__Link mobileMenu__Link--Highlight"
+            onClick={clickToggler}
+          >
+            Book a trial!
+          </Link>
+        </div>
+        <div className="mobileMenu__Bottom">
+          <span className="mobileMenu__BottomText">
+            Johns Creek, Georgia USA
+          </span>
+          <img
+            src={ApelieISOLOGO}
+            alt="Logo"
+            className="mobileMenu__BottomLogo"
+          ></img>
+        </div>
+      </div>
+      {menuToggle && <div className="menuMask" onClick={clickToggler} />}
     </nav>
   );
 };

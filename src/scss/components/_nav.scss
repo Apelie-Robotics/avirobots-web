@@ -73,7 +73,7 @@
 
   .mobileNav__Logo {
     @include dflex(center, column, end);
-    width: 40%;
+    width: 30%;
     text-decoration: none;
     img {
       width: 100%;
@@ -91,68 +91,39 @@
     height: 100%;
     width: 70vw;
     z-index: 2;
-    background-color: #171717f2;
-    border-top-right-radius: 30px;
+    background-color: #fefefef2;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 5%;
 
+    transition: 0.3s;
+
+    &--closed {
+      transform: translateX(-100%);
+    }
+
     &__Link {
-      color: map-get($colors, "light");
+      color: map-get($colors, "dark2");
       text-decoration: none;
       width: 80%;
-      border-bottom: map-get($colors, "light") 1px solid;
-      padding: 10% 0;
+      border-bottom: map-get($colors, "dark2") 1px solid;
+      border-bottom: #6a6a6a 1px solid;
+      padding: 5% 0;
 
       &:last-child {
         border-bottom: none;
       }
 
-      &--Dropdown {
-        @include dflex(space-between, row);
+      &--Highlight {
+        font-style: italic;
+        color: map-get($colors, "apelieOrange");
       }
 
       &Container {
         @include dflex();
-      }
-
-      &--Disabled {
-        cursor: default;
-        color: grey;
-      }
-    }
-
-    &__Sublink {
-      text-decoration: none;
-      background-color: rgb(187, 187, 187);
-      color: white;
-      width: 100%;
-      border-radius: 5% / 50%;
-      text-align: center;
-      padding: 2% 0;
-      transition: 0.1s;
-
-      &--Inactive {
-        background-color: rgba(255, 255, 255, 0);
-        visibility: hidden;
-        opacity: 0;
-        font-size: 0;
-        transition: visibility 0s, opacity 0.1s, font-size 0.1s;
-      }
-
-      &Container {
-        width: 80%;
-        margin-top: 10px;
-        @include dflex();
-        gap: 10px;
-        &--Inactive {
-          margin: 0;
-          gap: 0;
-          height: 0;
-        }
       }
     }
 
@@ -166,10 +137,10 @@
         z-index: 1;
       }
       &--Close {
-        color: map-get($colors, "light");
+        color: map-get($colors, "apelieOrange");
         width: 100%;
         padding-left: 5vw;
-        margin-bottom: 10%;
+        margin-bottom: 30%;
         @include dflex(start, row);
       }
     }
@@ -178,13 +149,13 @@
       margin-left: auto;
       margin-right: auto;
       width: 80%;
-      @include dflex(space-between, row);
+      @include dflex(space-between, row, end);
       &Text {
-        color: map-get($colors, "light");
-        font-size: 0.6rem;
-        width: 50%;
+        color: map-get($colors, "dark");
+        font-size: 0.7rem;
       }
       &Logo {
+        opacity: 80%;
         width: 25%;
       }
     }
@@ -197,6 +168,5 @@
     height: 100%;
     width: 100%;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0);
   }
 }

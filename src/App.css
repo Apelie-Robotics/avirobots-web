@@ -2,11 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* overflow: scroll; */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 }
-
 
 .pre-wrap {
   white-space: pre-wrap;
@@ -15,6 +11,7 @@
 * {
   font-family: "Inter", sans-serif;
 }
+
 .nav {
   display: none;
   width: 100%;
@@ -37,7 +34,6 @@
 .nav__Logo img {
   width: 100%;
 }
-
 .nav__LinkContainer {
   width: 25%;
   display: flex;
@@ -106,7 +102,7 @@
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  width: 40%;
+  width: 30%;
   text-decoration: none;
 }
 .mobileNav .mobileNav__Logo img {
@@ -123,29 +119,31 @@
   height: 100%;
   width: 70vw;
   z-index: 2;
-  background-color: rgba(23, 23, 23, 0.9490196078);
-  border-top-right-radius: 30px;
+  background-color: rgba(254, 254, 254, 0.9490196078);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 5%;
+  padding-top: 10%;
   padding-bottom: 5%;
+  transition: 0.3s;
+}
+.mobileNav .mobileMenu--closed {
+  transform: translateX(-100%);
 }
 .mobileNav .mobileMenu__Link {
-  color: white;
+  color: #6a6a6a;
   text-decoration: none;
   width: 80%;
-  border-bottom: white 1px solid;
-  padding: 10% 0;
+  border-bottom: #6a6a6a 1px solid;
+  border-bottom: #6a6a6a 1px solid;
+  padding: 5% 0;
 }
 .mobileNav .mobileMenu__Link:last-child {
   border-bottom: none;
 }
-.mobileNav .mobileMenu__Link--Dropdown {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.mobileNav .mobileMenu__Link--Highlight {
+  font-style: italic;
+  color: #ff964d;
 }
 .mobileNav .mobileMenu__LinkContainer {
   display: flex;
@@ -153,42 +151,6 @@
   align-items: center;
   justify-content: space-between;
 }
-.mobileNav .mobileMenu__Link--Disabled {
-  cursor: default;
-  color: grey;
-}
-.mobileNav .mobileMenu__Sublink {
-  text-decoration: none;
-  background-color: rgb(187, 187, 187);
-  color: white;
-  width: 100%;
-  border-radius: 5%/50%;
-  text-align: center;
-  padding: 2% 0;
-  transition: 0.1s;
-}
-.mobileNav .mobileMenu__Sublink--Inactive {
-  background-color: rgba(255, 255, 255, 0);
-  visibility: hidden;
-  opacity: 0;
-  font-size: 0;
-  transition: visibility 0s, opacity 0.1s, font-size 0.1s;
-}
-.mobileNav .mobileMenu__SublinkContainer {
-  width: 80%;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-.mobileNav .mobileMenu__SublinkContainer--Inactive {
-  margin: 0;
-  gap: 0;
-  height: 0;
-}
-
 .mobileNav .mobileMenu__Button {
   border: none;
   font-size: 1.5rem;
@@ -200,10 +162,10 @@
   z-index: 1;
 }
 .mobileNav .mobileMenu__Button--Close {
-  color: white;
+  color: #ff964d;
   width: 100%;
   padding-left: 5vw;
-  margin-bottom: 10%;
+  margin-bottom: 30%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -215,15 +177,15 @@
   width: 80%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
 }
 .mobileNav .mobileMenu__BottomText {
-  color: white;
-  font-size: 0.6rem;
-  width: 50%;
+  color: black;
+  font-size: 0.7rem;
 }
 .mobileNav .mobileMenu__BottomLogo {
+  opacity: 80%;
   width: 25%;
 }
 .mobileNav .menuMask {
@@ -233,7 +195,6 @@
   height: 100%;
   width: 100%;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0);
 }
 
 footer {
@@ -477,7 +438,6 @@ footer .secondaryContainer p {
   .carouselAndBtnContainer .carouselContainer .carouselWrapper .inactive {
     width: 0;
   }
-
 }
 
 .home {
@@ -581,7 +541,6 @@ footer .secondaryContainer p {
 .home .section3 .content img {
   width: 100%;
 }
-
 .home .section3 .app {
   margin-bottom: 0;
 }
@@ -594,8 +553,6 @@ footer .secondaryContainer p {
 .home .section4 h2 {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 2rem;
-
 }
 .home .section4 .contentContainer {
   display: flex;
@@ -741,15 +698,12 @@ footer .secondaryContainer p {
     white-space: nowrap;
     transition: transform 0.3s;
     width: 100vw;
-    /* overflow: hidden; */
   }
   .home .section1 .pc .heroCarousel .carouselInner .slide {
     height: 85vh;
     width: 100vw;
     position: relative;
     display: inline-flex;
-    overflow: hidden;
-
   }
   .home .section1 .pc .heroCarousel .carouselInner .slide1::before {
     content: "";
@@ -770,8 +724,8 @@ footer .secondaryContainer p {
     left: 5%;
     top: 10%;
     font-weight: 800;
-    font-size: 5.5rem;
-    line-height: 5.5rem;
+    font-size: 4.5rem;
+    line-height: 3.75rem;
     color: white;
     text-shadow: -2px 4px 7.3px rgba(0, 0, 0, 0.3);
     height: fit-content;
@@ -797,7 +751,7 @@ footer .secondaryContainer p {
     inset: 0;
     height: 75%;
     top: 40%;
-    left: 30%;
+    left: 25%;
   }
   .home .section1 .pc .heroCarousel .carouselInner .slide1 .button {
     position: absolute;
@@ -901,7 +855,6 @@ footer .secondaryContainer p {
   .home .section3 h2 {
     text-align: center;
     margin-bottom: 50px;
-    font-size: 2.5rem;
   }
   .home .section3 h2 br {
     display: none;
@@ -911,13 +864,12 @@ footer .secondaryContainer p {
     flex-direction: row;
     align-items: start;
     justify-content: center;
-    gap: 100px;
+    gap: 25px;
     padding: 0 10%;
   }
   .home .section3 .contentContainer .content {
     margin: 0;
-    width: 40%;
-    gap: 40px;
+    gap: 25px;
   }
   .home .section3 .contentContainer .content img {
     height: 35vh;
@@ -935,14 +887,14 @@ footer .secondaryContainer p {
     align-items: start;
     justify-content: center;
     padding: 0 10%;
-    gap: 2%;
+    gap: 2.5%;
     width: 100%;
   }
   .home .section4 .contentContainer .content {
-    width: 15%;
+    width: 25%;
   }
   .home .section4 .contentContainer .content img {
-    height: 15vh;
+    height: 25vh;
   }
   .home .section4 .contentContainer .line {
     border-bottom: none;
@@ -956,7 +908,6 @@ footer .secondaryContainer p {
     gap: 0;
   }
   .home .section5 h2 {
-    font-size: 2rem;
     margin-bottom: 10vh;
   }
   .home .section5 .validationMobile {
@@ -964,16 +915,16 @@ footer .secondaryContainer p {
   }
   .home .section5 .validation {
     display: inline;
-    width: 70%;
+    width: 100%;
   }
   .home .section5 .references {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    padding-left: 18%;
+    padding-left: 30px;
     width: 100%;
-    gap: 30px;
+    gap: 25px;
   }
   .home .section5 .references .reference {
     display: flex;
@@ -1002,7 +953,7 @@ footer .secondaryContainer p {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 25px;
   }
   .home .section6 .pc .content {
     display: flex;
@@ -1023,7 +974,7 @@ footer .secondaryContainer p {
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
-    gap: 80px;
+    gap: 25px;
   }
   .home .section6 .pc .content .text .column {
     width: 50%;
@@ -1108,17 +1059,6 @@ footer .secondaryContainer p {
 }
 .aboutUs .section1 .weAre {
   margin-top: 7.5vh;
-  font-size: 2vw;
-}
-.aboutUs .section1 p {
-  font-size: 2vw;
-}
-
-.aboutUs .section1 .firstp {
-  width: 150%;
-}
-.aboutUs .section1 .secondp {
-  width: 130%;
 }
 .aboutUs .section2 {
   display: flex;
@@ -1131,18 +1071,18 @@ footer .secondaryContainer p {
 .aboutUs .section2 p {
   color: rgb(182, 182, 182);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
 }
 .aboutUs .section2 .button {
   text-decoration: underline;
 }
 .aboutUs .section3 {
-  padding: 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  
+  padding: 0 10%;
+  padding-bottom: 7.5vh;
   gap: 5vh;
 }
 .aboutUs .section3 h2 {
@@ -1152,7 +1092,6 @@ footer .secondaryContainer p {
   display: none;
 }
 .aboutUs .section3 img {
-  padding: 0px;
   width: 100%;
 }
 .aboutUs .section4 {
@@ -1169,7 +1108,6 @@ footer .secondaryContainer p {
 @media (min-width: 768px) {
   .aboutUs h1 {
     padding-top: 10vh;
-    font-size: 2vw;
   }
   .aboutUs .section1 {
     padding: 7.5vh 25%;
@@ -1299,21 +1237,6 @@ footer .secondaryContainer p {
   .contactPage .contactForm .inputContainer {
     width: 100%;
   }
-  .home .section1 .pc .heroCarousel .carouselInner .slide1 h1 {
-    font-size: 6vw;
-    line-height: 5.8vw;
-  }
-  .home .section1 .pc .heroCarousel .carouselInner .slide1 .textContainer {
-    margin-top: 3%;
-    font-size: 1vw;
-  }
-  .home .section1 .pc .heroCarousel .carouselInner .slide1 .poultryArticle {
-    position: absolute;
-    inset: 0;
-    height: 90%;
-    top: 40%;
-    left: 25%;
-}
 }
 .errorPage {
   height: 80vh;
@@ -1323,40 +1246,6 @@ footer .secondaryContainer p {
   justify-content: center;
   gap: 20px;
   text-align: center;
-}
-@media only screen and (max-width: 767px) {
-  .aboutUs .section1 .firstp {
-    width: 80%;  
-    font-size: 1rem;
-
-  }
-  .mobileNav .mobileNav__Logo img {
-  
-    margin-right: 20%;
-}
-  .aboutUs .section1 .secondp {
-    width: 80%;
-    font-size: 1rem;
-
-  }
-  .mobileNav .mobileNav__Logo span {
-    
-    margin-right: 20%;
-}
-
-  .aboutUs .section1 .weAre {
-    margin-top: 7.5vh;
-    font-size: 2vw;
-    width: 80%;
-    font-size: 1rem;
-
-  }
-
-  .aboutUs .section2 p {
-    color: rgb(182, 182, 182);
-    text-align: center;
-    font-size: 1rem;
-  }
 }
 
 /*# sourceMappingURL=App.css.map */
