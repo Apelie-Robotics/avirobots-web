@@ -1,0 +1,55 @@
+.trialForm {
+  background-color: map-get($colors, "light");
+  border-radius: 20px;
+  padding: 15px 30px;
+
+  .titles {
+    margin-bottom: 15px;
+
+    p {
+      font-size: 0.8rem;
+      color: map-get($colors, "dark2");
+    }
+  }
+
+  .inputsContainer {
+    margin-bottom: 30px;
+    & > *:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    .input {
+      @include dflex(space-between, column, start);
+      gap: 5px;
+      label {
+        font-size: 0.6rem;
+        color: map-get($colors, "dark2");
+      }
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        background-color: #d9d9d9;
+        padding: 5px;
+        outline: none;
+      }
+      textarea {
+        resize: none;
+      }
+    }
+
+    .dateTimeInputs {
+      @include dflex(space-between, row);
+      input {
+        text-align: center;
+      }
+    }
+  }
+
+  .button {
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

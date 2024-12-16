@@ -1,597 +1,682 @@
 .home {
   color: #343434;
-  .button {
-    &Pc {
-      display: none;
-    }
+  // .button {
+  //   &Pc {
+  //     display: none;
+  //   }
 
-    &--light {
-      @include dflex(space-between, row);
-      gap: 5px;
+  //   &--light {
+  //     @include dflex(space-between, row);
+  //     gap: 5px;
 
-      .arrow {
-        color: map-get($colors, "apelieOrange");
-        font-size: 1rem;
-      }
-    }
+  //     .arrow {
+  //       color: map-get($colors, "primary");
+  //       font-size: 1rem;
+  //     }
+  //   }
+  // }
+
+  & > *:not(:nth-child(2)) {
+    margin-top: 10vh;
   }
 
   .section1 {
-    .pc {
-      display: none;
+    height: 75vh;
+    @include dflex(space-between, column, start);
+    margin: 15px;
+    margin-bottom: 0;
+    padding: 35px 30px 35% 20px;
+    border-radius: 20px;
+    // background-image: url()
+    background-color: #343434; // provisional
+    color: map-get($colors, "light");
+
+    h2 {
+      font-size: 2rem;
     }
-
-    .mobile {
-      padding: 0 2.5%;
-      .hero {
-        background-image: url(/assets/picture/chickensMobile.png);
-        background-size: cover;
-        background-position: center;
-        height: 50vh;
-        h1 {
-          font-weight: 800;
-          font-size: 3rem;
-          color: white;
-          text-shadow: -2px 4px 7.3px rgba(0, 0, 0, 0.3);
-          padding: 0 5%;
-          padding-top: 15%;
-          line-height: 2.8rem;
-        }
-      }
-
-      .textContainer {
-        margin-top: 100px;
-        margin-bottom: 10vh;
-        padding: 0 5%;
-        @include dflex();
-        text-align: center;
-        gap: 15px;
-
-        .button {
-          text-decoration: underline;
-        }
-
-        .line {
-          margin-top: 35px;
-          border-bottom: map-get($colors, "apelieOrange") solid 2px;
-          width: 25vw;
-        }
-      }
+    p {
+      margin-top: 5px;
+      font-size: 0.8rem;
+    }
+    .buttonContainer {
+      @include dflex(end, column, start);
+      gap: 25px;
     }
   }
 
   .section2 {
-    @include dflex();
-    gap: 15px;
-    padding: 0 7.5%;
-    margin-bottom: 10vh;
-    h2 {
-      font-weight: 400;
-      span {
-        font-weight: 700;
+    .titles {
+      margin: 2.5vh 30px;
+      margin-top: 0;
+      p {
+        margin-top: 5px;
+        font-style: italic;
+        font-size: 0.8rem;
+        color: map-get($colors, "dark2");
       }
     }
+    .cardsContainer {
+      display: flex;
+      gap: 20px;
+      padding: 0 15px;
+      padding-top: 15px;
 
-    video,
-    .ownership {
-      display: none;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .card {
+        background-color: #eeeeee;
+        padding: 25px 15px;
+        border-radius: 20px;
+
+        flex: 0 0 90%;
+        height: fit-content;
+        scroll-snap-align: center;
+
+        & > *:not(:first-child) {
+          margin-top: 2.5vh;
+        }
+        .imgContainer {
+          @include dflex();
+          width: 100%;
+          height: 25vh;
+          background-color: #201c1c;
+          border-radius: 20px;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: map-get($colors, "dark2");
+        }
+
+        .appContainer {
+          position: relative;
+
+          img {
+            position: absolute;
+            height: 130%;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
     }
   }
 
   .section3 {
-    background-color: #eeeeee;
-    padding: 10% 5%;
+    margin-left: 30px;
+    margin-right: 30px;
     h2 {
+      text-align: center;
       margin-bottom: 5vh;
-      font-weight: 400;
-      span {
-        font-weight: 700;
-      }
     }
 
-    .content {
-      @include dflex();
-      gap: 15px;
-      margin-bottom: 15vh;
-      h3 {
-        color: map-get($colors, "apelieOrange");
-      }
-      img {
-        width: 100%;
-      }
-    }
+    .benefitsContainer {
+      @include dflex(space-evenly, row, start);
+      row-gap: 25px;
+      flex-wrap: wrap;
 
-    .app {
-      margin-bottom: 0;
-      img {
-        width: 50%;
+      article {
+        width: 40vw;
+        @include dflex();
+        gap: 15px;
+
+        p {
+          text-align: center;
+          font-size: 0.8rem;
+        }
       }
     }
   }
 
   .section4 {
-    margin: 15vh 0;
-    h2 {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .contentContainer {
-      @include dflex();
-      gap: 50px;
+    padding: 15px 30px;
+    padding-bottom: 30px;
+    background-color: grey;
+    color: map-get($colors, "light");
+    height: 50vh;
+    @include dflex(space-between, column, start);
+    .titles {
       h2 {
         font-weight: 400;
+        margin-bottom: 15px;
       }
-      .content {
-        @include dflex();
-        gap: 10px;
-        p {
-          text-align: center;
-          width: 80%;
-        }
+      p {
+        font-style: italic;
+        font-size: 0.8rem;
       }
-      .line {
-        width: 15%;
-        border-bottom: solid 2px map-get($colors, "apelieOrange");
-      }
+    }
+
+    .locationIcon {
+      margin-right: 5px;
     }
   }
 
+  // .section5 {
+  //   @include dflex();
+  //   gap: 5vh;
+  //   margin-bottom: 15vh;
+  //   h2 {
+  //     font-weight: 400;
+  //   }
+  //   .validation {
+  //     display: none;
+  //   }
+  //   .references {
+  //     display: none;
+  //   }
+  // }
+
+  // .section5 {
+  //   .mobile {
+  //     padding: 0 10%;
+  //     @include dflex();
+  //     gap: 5vh;
+  //     margin-bottom: 15vh;
+  //     h2 {
+  //       text-align: center;
+  //       a {
+  //         color: inherit;
+  //       }
+  //     }
+
+  //     .text {
+  //       p {
+  //         margin-bottom: 5vh;
+  //       }
+  //     }
+
+  //     .bootsContainer {
+  //       position: relative;
+
+  //       img {
+  //         width: 75%;
+  //       }
+  //       .button {
+  //         height: fit-content;
+  //         width: fit-content;
+  //         position: absolute;
+  //         inset: 0;
+  //         left: 60%;
+  //       }
+  //     }
+  //   }
+  //   .pc {
+  //     display: none;
+  //   }
+  // }
+
   .section5 {
-    @include dflex();
-    gap: 5vh;
-    margin-bottom: 15vh;
+    padding: 0 30px;
+
+    & > *:not(:first-child) {
+      margin-top: 5vh;
+    }
+
     h2 {
-      font-weight: 400;
+      text-align: center;
+      a {
+        color: inherit;
+      }
     }
-    .validation {
-      display: none;
+
+    p {
+      margin: 0 15px;
+      font-size: 0.8rem;
+      color: #4a4a4a;
     }
-    .references {
-      display: none;
+
+    .bootsContainer {
+      position: relative;
+      img {
+        width: 50vw;
+      }
+      .button {
+        position: absolute;
+        top: 15%;
+        right: 7.5%;
+        white-space: nowrap;
+      }
     }
   }
 
   .section6 {
-    .mobile {
-      padding: 0 10%;
-      @include dflex();
-      gap: 5vh;
-      margin-bottom: 15vh;
-      h2 {
-        text-align: center;
-        a {
-          color: inherit;
-        }
-      }
+    padding: 30px;
+    height: 50vh;
+    background-color: grey;
+    color: map-get($colors, "light");
 
-      .text {
-        p {
-          margin-bottom: 5vh;
-        }
-      }
-
-      .bootsContainer {
-        position: relative;
-
-        img {
-          width: 75%;
-        }
-        .button {
-          height: fit-content;
-          width: fit-content;
-          position: absolute;
-          inset: 0;
-          left: 60%;
-        }
-      }
+    h2 {
+      width: 75%;
+      margin-bottom: 5px;
     }
-    .pc {
-      display: none;
+    p {
+      width: 50%;
+      font-size: 0.8rem;
+      font-style: italic;
     }
   }
 
   .section7 {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.133) 0%,
-        rgba(0, 0, 0, 0.693) 80%,
-        rgb(0, 0, 0) 100%
-      ),
-      url(/assets/picture/blueprintsMobile.png);
-    background-size: cover;
-
-    p {
-      display: none;
+    h2 {
+      text-align: center;
+      margin-bottom: 5vh;
     }
-    .contentContainer {
-      @include dflex();
-      gap: 5vh;
-      padding: 10vh 0;
+    img {
       position: relative;
-
-      .content {
-        @include dflex();
-        .number {
-          font-size: 5rem;
-          line-height: 4.5rem;
-          font-weight: 800;
-          color: map-get($colors, "light");
-          letter-spacing: -5px;
-        }
-        .text {
-          color: map-get($colors, "light");
-          font-size: 1.5rem;
-        }
-      }
-      .line {
-        border-bottom: solid 2px map-get($colors, "apelieOrange");
-        width: 15%;
-      }
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
   .section8 {
-    padding-top: 10vh;
-    padding-bottom: 20vh;
-    h2 {
-      text-align: center;
-      margin-bottom: 10vh;
-      font-weight: 400;
-    }
+    background: url("/public/assets/picture/sawdust.png");
+    padding: 30px;
   }
+
+  // .section7 {
+  //   background: linear-gradient(
+  //       180deg,
+  //       rgba(0, 0, 0, 0.133) 0%,
+  //       rgba(0, 0, 0, 0.693) 80%,
+  //       rgb(0, 0, 0) 100%
+  //     ),
+  //     url(/assets/picture/blueprintsMobile.png);
+  //   background-size: cover;
+
+  //   p {
+  //     display: none;
+  //   }
+  //   .contentContainer {
+  //     @include dflex();
+  //     gap: 5vh;
+  //     padding: 10vh 0;
+  //     position: relative;
+
+  //     .content {
+  //       @include dflex();
+  //       .number {
+  //         font-size: 5rem;
+  //         line-height: 4.5rem;
+  //         font-weight: 800;
+  //         color: map-get($colors, "light");
+  //         letter-spacing: -5px;
+  //       }
+  //       .text {
+  //         color: map-get($colors, "light");
+  //         font-size: 1.5rem;
+  //       }
+  //     }
+  //     .line {
+  //       border-bottom: solid 2px map-get($colors, "primary");
+  //       width: 15%;
+  //     }
+  //   }
+  // }
 }
 
-@include tablet {
-  .home {
-    .section1 {
-      .mobile {
-        display: none;
-      }
-      .pc {
-        display: block;
-        .heroCarousel {
-          width: 100%;
-          position: relative;
-          overflow-x: hidden;
-          @include dflex(center);
-          position: relative;
+// @include tablet {
+//   .home {
+//     .section1 {
+//       .mobile {
+//         display: none;
+//       }
+//       .pc {
+//         display: block;
+//         .heroCarousel {
+//           width: 100%;
+//           position: relative;
+//           overflow-x: hidden;
+//           @include dflex(center);
+//           position: relative;
 
-          .carouselInner {
-            white-space: nowrap;
-            transition: transform 0.3s;
-            width: 100vw;
+//           .carouselInner {
+//             white-space: nowrap;
+//             transition: transform 0.3s;
+//             width: 100vw;
 
-            .slide {
-              height: 85vh;
-              width: 100vw;
-              position: relative;
-              display: inline-flex;
-            }
+//             .slide {
+//               height: 85vh;
+//               width: 100vw;
+//               position: relative;
+//               display: inline-flex;
+//             }
 
-            .slide1 {
-              &::before {
-                content: "";
-                background: linear-gradient(
-                  90deg,
-                  rgba(0, 0, 0, 1) 10%,
-                  rgba(235, 239, 246, 0) 30%
-                );
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                inset: 0;
-              }
+//             .slide1 {
+//               &::before {
+//                 content: "";
+//                 background: linear-gradient(
+//                   90deg,
+//                   rgba(0, 0, 0, 1) 10%,
+//                   rgba(235, 239, 246, 0) 30%
+//                 );
+//                 height: 100%;
+//                 width: 100%;
+//                 position: absolute;
+//                 inset: 0;
+//               }
 
-              .heroImg {
-                margin-left: 10%;
-                height: 100%;
-              }
+//               .heroImg {
+//                 margin-left: 10%;
+//                 height: 100%;
+//               }
 
-              h1 {
-                width: fit-content;
-                position: absolute;
-                inset: 0;
-                left: 5%;
-                top: 10%;
-                font-weight: 800;
-                font-size: 4.5rem;
-                line-height: 3.75rem;
-                color: white;
-                text-shadow: -2px 4px 7.3px rgba(0, 0, 0, 0.3);
-                height: fit-content;
-              }
+//               h1 {
+//                 width: fit-content;
+//                 position: absolute;
+//                 inset: 0;
+//                 left: 5%;
+//                 top: 10%;
+//                 font-weight: 800;
+//                 font-size: 4.5rem;
+//                 line-height: 3.75rem;
+//                 color: white;
+//                 text-shadow: -2px 4px 7.3px rgba(0, 0, 0, 0.3);
+//                 height: fit-content;
+//               }
 
-              .textContainer {
-                white-space: wrap;
-                position: absolute;
-                inset: 0;
-                left: 5%;
-                width: 23%;
-                top: 65%;
-                color: map-get($colors, "light");
-                @include dflex(start);
-                text-align: center;
-                gap: 15px;
-                font-size: 0.75rem;
-              }
+//               .textContainer {
+//                 white-space: wrap;
+//                 position: absolute;
+//                 inset: 0;
+//                 left: 5%;
+//                 width: 23%;
+//                 top: 65%;
+//                 color: map-get($colors, "light");
+//                 @include dflex(start);
+//                 text-align: center;
+//                 gap: 15px;
+//                 font-size: 0.75rem;
+//               }
 
-              .poultryArticle {
-                position: absolute;
-                inset: 0;
-                height: 75%;
-                top: 40%;
-                left: 25%;
-              }
+//               .poultryArticle {
+//                 position: absolute;
+//                 inset: 0;
+//                 height: 75%;
+//                 top: 40%;
+//                 left: 25%;
+//               }
 
-              .button {
-                position: absolute;
-                inset: 0;
-                top: 75%;
-                left: 75%;
-                padding: 9px 30px;
-                text-decoration: underline;
-                width: fit-content;
-                height: fit-content;
-              }
-            }
+//               .button {
+//                 position: absolute;
+//                 inset: 0;
+//                 top: 75%;
+//                 left: 75%;
+//                 padding: 9px 30px;
+//                 text-decoration: underline;
+//                 width: fit-content;
+//                 height: fit-content;
+//               }
+//             }
 
-            .slide2 {
-              position: absolute;
-              background-color: map-get($colors, "light");
-              .heroImg {
-                width: 100%;
-                height: 80%;
-                object-fit: cover;
-                filter: brightness(30%);
-              }
-              h2 {
-                position: absolute;
-                inset: 0;
-                top: 20%;
-                width: 100%;
-                height: fit-content;
-                text-align: center;
-                color: map-get($colors, "light");
-                font-weight: 500;
-              }
-              .robotAndApp {
-                position: absolute;
-                inset: 0;
-                height: 80%;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 30%;
-              }
-            }
-          }
+//             .slide2 {
+//               position: absolute;
+//               background-color: map-get($colors, "light");
+//               .heroImg {
+//                 width: 100%;
+//                 height: 80%;
+//                 object-fit: cover;
+//                 filter: brightness(30%);
+//               }
+//               h2 {
+//                 position: absolute;
+//                 inset: 0;
+//                 top: 20%;
+//                 width: 100%;
+//                 height: fit-content;
+//                 text-align: center;
+//                 color: map-get($colors, "light");
+//                 font-weight: 500;
+//               }
+//               .robotAndApp {
+//                 position: absolute;
+//                 inset: 0;
+//                 height: 80%;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 top: 30%;
+//               }
+//             }
+//           }
 
-          .buttonsContainer {
-            position: absolute;
-            padding: 0 1%;
-            inset: 0;
-            top: 45%;
-            @include dflex(space-between, row);
-            height: fit-content;
-            .carouselButton {
-              border: none;
-              background: none;
-              font-size: 2rem;
-            }
+//           .buttonsContainer {
+//             position: absolute;
+//             padding: 0 1%;
+//             inset: 0;
+//             top: 45%;
+//             @include dflex(space-between, row);
+//             height: fit-content;
+//             .carouselButton {
+//               border: none;
+//               background: none;
+//               font-size: 2rem;
+//             }
 
-            .active {
-              cursor: pointer;
-              color: map-get($colors, "light");
-            }
+//             .active {
+//               cursor: pointer;
+//               color: map-get($colors, "light");
+//             }
 
-            .inactive {
-              color: grey;
-            }
-          }
+//             .inactive {
+//               color: grey;
+//             }
+//           }
 
-          .dotContainer {
-            @include dflex(center, row);
-            margin: 5vh 0;
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
+//           .dotContainer {
+//             @include dflex(center, row);
+//             margin: 5vh 0;
+//             font-size: 1.5rem;
+//           }
+//         }
+//       }
+//     }
 
-    .section2 {
-      padding: 0;
-      position: relative;
-      video {
-        display: block;
-        width: 100%;
-      }
-      .textContainer {
-        position: absolute;
-        color: map-get($colors, "light");
-        text-align: start;
-        inset: 0;
-        padding: 5% 10%;
-        width: 60%;
-        p {
-          width: 60%;
-        }
-      }
-      .ownership {
-        display: inline;
-        position: absolute;
-        inset: 0;
-        top: 90%;
-        left: 80%;
-        color: grey;
-      }
-    }
+//     .section2 {
+//       padding: 0;
+//       position: relative;
+//       video {
+//         display: block;
+//         width: 100%;
+//       }
+//       .textContainer {
+//         position: absolute;
+//         color: map-get($colors, "light");
+//         text-align: start;
+//         inset: 0;
+//         padding: 5% 10%;
+//         width: 60%;
+//         p {
+//           width: 60%;
+//         }
+//       }
+//       .ownership {
+//         display: inline;
+//         position: absolute;
+//         inset: 0;
+//         top: 90%;
+//         left: 80%;
+//         color: grey;
+//       }
+//     }
 
-    .section3 {
-      padding: 5%;
-      h2 {
-        br {
-          display: none;
-        }
-        text-align: center;
-        margin-bottom: 50px;
-      }
+//     .section3 {
+//       padding: 5%;
+//       h2 {
+//         br {
+//           display: none;
+//         }
+//         text-align: center;
+//         margin-bottom: 50px;
+//       }
 
-      .contentContainer {
-        @include dflex(center, row, start);
-        gap: 25px;
-        padding: 0 10%;
+//       .contentContainer {
+//         @include dflex(center, row, start);
+//         gap: 25px;
+//         padding: 0 10%;
 
-        .content {
-          margin: 0;
-          gap: 25px;
-          img {
-            height: 35vh;
-            width: auto;
-          }
-          .robotImg {
-            transform: scaleX(-1);
-          }
-          p {
-            text-align: center;
-          }
-        }
-      }
-    }
+//         .content {
+//           margin: 0;
+//           gap: 25px;
+//           img {
+//             height: 35vh;
+//             width: auto;
+//           }
+//           .robotImg {
+//             transform: scaleX(-1);
+//           }
+//           p {
+//             text-align: center;
+//           }
+//         }
+//       }
+//     }
 
-    .section4 {
-      .contentContainer {
-        @include dflex(center, row, start);
-        padding: 0 10%;
-        gap: 2.5%;
-        width: 100%;
+//     .section4 {
+//       .contentContainer {
+//         @include dflex(center, row, start);
+//         padding: 0 10%;
+//         gap: 2.5%;
+//         width: 100%;
 
-        .content {
-          width: 25%;
+//         .content {
+//           width: 25%;
 
-          img {
-            height: 25vh;
-          }
-        }
-        .line {
-          border-bottom: none;
-          width: 0;
-          height: 50px;
-          border-left: solid 2px map-get($colors, "apelieOrange");
-          margin-top: calc(12.5vh - 25px);
-        }
-      }
-    }
+//           img {
+//             height: 25vh;
+//           }
+//         }
+//         .line {
+//           border-bottom: none;
+//           width: 0;
+//           height: 50px;
+//           border-left: solid 2px map-get($colors, "primary");
+//           margin-top: calc(12.5vh - 25px);
+//         }
+//       }
+//     }
 
-    .section5 {
-      padding: 0 15%;
-      gap: 0;
-      h2 {
-        margin-bottom: 10vh;
-      }
-      .validationMobile {
-        display: none;
-      }
-      .validation {
-        display: inline;
-        width: 100%;
-      }
-      .references {
-        @include dflex(start, row);
-        padding-left: 30px;
-        width: 100%;
-        gap: 25px;
-        .reference {
-          @include dflex(start, row);
-          gap: 5px;
-          .square {
-            width: 1rem;
-            height: 1rem;
-          }
-          .orange {
-            background-color: map-get($colors, "apelieOrange");
-          }
-          .purple {
-            background-color: #3f5199;
-          }
-        }
-      }
-    }
+//     .section5 {
+//       padding: 0 15%;
+//       gap: 0;
+//       h2 {
+//         margin-bottom: 10vh;
+//       }
+//       .validationMobile {
+//         display: none;
+//       }
+//       .validation {
+//         display: inline;
+//         width: 100%;
+//       }
+//       .references {
+//         @include dflex(start, row);
+//         padding-left: 30px;
+//         width: 100%;
+//         gap: 25px;
+//         .reference {
+//           @include dflex(start, row);
+//           gap: 5px;
+//           .square {
+//             width: 1rem;
+//             height: 1rem;
+//           }
+//           .orange {
+//             background-color: map-get($colors, "primary");
+//           }
+//           .purple {
+//             background-color: #3f5199;
+//           }
+//         }
+//       }
+//     }
 
-    .section6 {
-      .mobile {
-        display: none;
-      }
+//     .section6 {
+//       .mobile {
+//         display: none;
+//       }
 
-      .pc {
-        background-color: #eeeeee;
-        padding: 10vh 5%;
-        @include dflex(center, row);
-        gap: 25px;
+//       .pc {
+//         background-color: #eeeeee;
+//         padding: 10vh 5%;
+//         @include dflex(center, row);
+//         gap: 25px;
 
-        .content {
-          @include dflex();
-          gap: 5vh;
-          width: 150%;
+//         .content {
+//           @include dflex();
+//           gap: 5vh;
+//           width: 150%;
 
-          h2 {
-            text-align: center;
-            a {
-              color: map-get($colors, "dark");
-            }
-          }
+//           h2 {
+//             text-align: center;
+//             a {
+//               color: map-get($colors, "dark");
+//             }
+//           }
 
-          .text {
-            @include dflex(space-between, row, start);
-            gap: 25px;
-            .column {
-              width: 50%;
-            }
-          }
+//           .text {
+//             @include dflex(space-between, row, start);
+//             gap: 25px;
+//             .column {
+//               width: 50%;
+//             }
+//           }
 
-          .button {
-            padding: 9px 35px;
-          }
-        }
+//           .button {
+//             padding: 9px 35px;
+//           }
+//         }
 
-        img {
-          align-self: end;
-          width: 50%;
-        }
-      }
-    }
+//         img {
+//           align-self: end;
+//           width: 50%;
+//         }
+//       }
+//     }
 
-    .section7 {
-      background-image: url(/assets/picture/blueprints.jpg);
-      padding: 35vh 0;
+//     .section7 {
+//       background-image: url(/assets/picture/blueprints.jpg);
+//       padding: 35vh 0;
 
-      p {
-        display: block;
-      }
-      .contentContainer {
-        @include dflex(center, row);
-        .line {
-          border-bottom: none;
-          width: 0;
-          height: 50px;
-          border-left: 2px solid map-get($colors, "apelieOrange");
-        }
-        .content {
-          span {
-            text-align: center;
-          }
-        }
-      }
+//       p {
+//         display: block;
+//       }
+//       .contentContainer {
+//         @include dflex(center, row);
+//         .line {
+//           border-bottom: none;
+//           width: 0;
+//           height: 50px;
+//           border-left: 2px solid map-get($colors, "primary");
+//         }
+//         .content {
+//           span {
+//             text-align: center;
+//           }
+//         }
+//       }
 
-      p {
-        color: map-get($colors, "light");
-        text-align: center;
-      }
-    }
+//       p {
+//         color: map-get($colors, "light");
+//         text-align: center;
+//       }
+//     }
 
-    .section8 {
-      padding-bottom: 10vh;
-      h2 {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
+//     .section8 {
+//       padding-bottom: 10vh;
+//       h2 {
+//         margin-bottom: 0;
+//       }
+//     }
+//   }
+// }

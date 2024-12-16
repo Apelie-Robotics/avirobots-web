@@ -119,7 +119,7 @@
 
       &--Highlight {
         font-style: italic;
-        color: map-get($colors, "apelieOrange");
+        color: map-get($colors, "primary");
       }
 
       &Container {
@@ -131,13 +131,13 @@
       border: none;
       font-size: 1.5rem;
       z-index: 3;
-      background-color: rgba(0, 0, 0, 0);
+      background: none;
       &--Open {
-        color: map-get($colors, "dark");
+        color: map-get($colors, "dark2");
         z-index: 1;
       }
       &--Close {
-        color: map-get($colors, "apelieOrange");
+        color: map-get($colors, "primary");
         width: 100%;
         padding-left: 5vw;
         margin-bottom: 30%;
