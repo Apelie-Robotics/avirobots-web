@@ -487,7 +487,8 @@ footer .secondaryContainer p {
   color: #6a6a6a;
 }
 .trialForm .inputsContainer .input input,
-.trialForm .inputsContainer .input textarea {
+.trialForm .inputsContainer .input textarea,
+.trialForm .inputsContainer .input select {
   width: 100%;
   border: none;
   background-color: #d9d9d9;
@@ -507,10 +508,23 @@ footer .secondaryContainer p {
   text-align: center;
 }
 .trialForm .button {
-  width: 50%;
+  min-width: 50%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+.trialForm .sendButtonContainer p {
+  font-size: 0.8rem;
+  color: #6a6a6a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.trialForm .sendButtonContainer .button--outline {
+  color: #f7941e;
+}
+.trialForm .sendButtonContainer .error {
+  font-size: 0.8rem;
+  color: rgb(244, 64, 64);
 }
 
 .home {
@@ -712,7 +726,7 @@ footer .secondaryContainer p {
   transform: translateX(-50%);
 }
 .home .section8 {
-  background: url("/public/assets/picture/sawdust.png");
+  background: url("/assets/picture/sawdustMobile.jpg");
   padding: 30px;
 }
 

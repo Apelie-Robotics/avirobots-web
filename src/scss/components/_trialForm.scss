@@ -26,7 +26,8 @@
         color: map-get($colors, "dark2");
       }
       input,
-      textarea {
+      textarea,
+      select {
         width: 100%;
         border: none;
         background-color: #d9d9d9;
@@ -47,9 +48,25 @@
   }
 
   .button {
-    width: 50%;
+    min-width: 50%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .sendButtonContainer {
+    p {
+      font-size: 0.8rem;
+      color: map-get($colors, "dark2");
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .button--outline {
+      color: map-get($colors, "primary");
+    }
+    .error {
+      font-size: 0.8rem;
+      color: rgb(244, 64, 64);
+    }
   }
 }
