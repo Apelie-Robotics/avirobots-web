@@ -1,83 +1,36 @@
 footer {
-  background-color: #0d1117;
   color: map-get($colors, "light");
-
+  font-size: 0.8rem;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
   .mainContainer {
-    @include dflex(space-between, row);
-    gap: 10%;
-    padding: 3%;
+    background-color: #0d1117;
+    @include dflex(space-between, row, start);
+    padding: 30px;
 
     .leftContainer {
-      @include dflex(space-between, column, start);
-      gap: 15px;
-
+      width: 50%;
       img {
-        width: 75%;
+        width: 20vw;
+        margin-bottom: 30px;
       }
-
-      .button {
-        border: #8b949e solid 1px;
-        border-radius: 0.75rem;
-        font-weight: bold;
-      }
-
-      .primaryText {
-        color: #dcedff;
-      }
-
-      .secondaryText {
+      p {
         color: #8b949e;
       }
     }
 
     .rightContainer {
-      width: 35vw;
-      height: 100%;
-      @include dflex(space-between, column, start);
-      gap: 20px;
-      flex-shrink: 0;
-
-      a {
-        text-decoration: none;
-        color: map-get($colors, "light");
-      }
+      @include dflex(space-between, column, end);
+      gap: 10px;
     }
   }
 
   .secondaryContainer {
     background-color: #13171d;
-    padding: 2%;
-
-    p {
-      color: #8b949e;
-    }
-  }
-}
-
-@include tablet {
-  footer {
-    .mainContainer {
-      padding-right: 0;
-
-      .leftContainer {
-        img {
-          width: 25%;
-        }
-      }
-
-      .rightContainer {
-        gap: 15px;
-      }
-    }
-
-    .secondaryContainer {
-      @include dflex(end, row);
-      padding: 2% 0;
-
-      p {
-        width: 35vw;
-        padding-right: 3%;
-      }
-    }
+    color: map-get($colors, "dark2");
+    text-align: end;
+    padding: 15px 30px;
   }
 }

@@ -214,82 +214,45 @@
 }
 
 footer {
-  background-color: #0d1117;
   color: white;
+  font-size: 0.8rem;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
 }
 footer .mainContainer {
+  background-color: #0d1117;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10%;
-  padding: 3%;
-}
-footer .mainContainer .leftContainer {
-  display: flex;
-  flex-direction: column;
   align-items: start;
   justify-content: space-between;
-  gap: 15px;
+  padding: 30px;
+}
+footer .mainContainer .leftContainer {
+  width: 50%;
 }
 footer .mainContainer .leftContainer img {
-  width: 75%;
+  width: 20vw;
+  margin-bottom: 30px;
 }
-footer .mainContainer .leftContainer .button {
-  border: #8b949e solid 1px;
-  border-radius: 0.75rem;
-  font-weight: bold;
-}
-footer .mainContainer .leftContainer .primaryText {
-  color: #dcedff;
-}
-footer .mainContainer .leftContainer .secondaryText {
+footer .mainContainer .leftContainer p {
   color: #8b949e;
 }
 footer .mainContainer .rightContainer {
-  width: 35vw;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: end;
   justify-content: space-between;
-  gap: 20px;
-  flex-shrink: 0;
-}
-footer .mainContainer .rightContainer a {
-  text-decoration: none;
-  color: white;
+  gap: 10px;
 }
 footer .secondaryContainer {
   background-color: #13171d;
-  padding: 2%;
-}
-footer .secondaryContainer p {
-  color: #8b949e;
+  color: #6a6a6a;
+  text-align: end;
+  padding: 15px 30px;
 }
 
-@media (min-width: 768px) {
-  footer .mainContainer {
-    padding-right: 0;
-  }
-  footer .mainContainer .leftContainer img {
-    width: 25%;
-  }
-  footer .mainContainer .rightContainer {
-    gap: 15px;
-  }
-  footer .secondaryContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    padding: 2% 0;
-  }
-  footer .secondaryContainer p {
-    width: 35vw;
-    padding-right: 3%;
-  }
-}
 .button {
   border-radius: 11px;
   text-decoration: none;

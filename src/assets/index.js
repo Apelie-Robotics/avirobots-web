@@ -13,3 +13,4 @@ export { default as poultryScience } from "/assets/picture/poultryScience.jpg";
 
 export { default as aviRobotsLogo } from "/assets/logo/aviRobotsLogo.png";
 export { default as apelieIsologo } from "/assets/logo/apelieIsologo.png";
+export { default as apelieLogo } from "/assets/logo/apelieLogo.png";

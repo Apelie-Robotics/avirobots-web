@@ -1,7 +1,6 @@
 import poultryArticle from "/assets/file/poultryArticleConicetApelie.pdf";
 import {
   flockerMobile,
-  boots,
   illustration1,
   illustration2,
   illustration3,
