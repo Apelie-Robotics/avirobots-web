@@ -9,7 +9,6 @@ export { default as locationIcon } from "/assets/picture/locationIcon.png";
 export { default as boots } from "/assets/picture/boots.png";
 export { default as validationMobile } from "/assets/picture/validationMobile.png";
 export { default as app } from "/assets/picture/app.png";
-export { default as chickensMobile } from "/assets/picture/chickensMobile.jpg";
 export { default as poultryScience } from "/assets/picture/poultryScience.jpg";
 
 // About us

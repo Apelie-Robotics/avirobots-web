@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const TrialForm = () => {
   const [state, handleSubmit, reset] = useForm(
-    import.meta.env.VITE_CONTACT_FORM_ID
+    import.meta.env.VITE_TRIAL_FORM_ID
   );
   const [error, setError] = useState(false);
 

@@ -565,7 +565,7 @@ footer .secondaryContainer {
   transform: translateY(-50%);
 }
 .home .section3 {
-  background: url("/assets/picture/chickensMobile.jpg");
+  background: url("/assets/picture/chickens.jpg");
   background-size: cover;
   padding: 50px 15%;
   color: white;
@@ -702,14 +702,15 @@ footer .secondaryContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
   row-gap: 45px;
+  flex-wrap: wrap;
   margin-bottom: 45px;
 }
 .aboutUs .contentContainer .pictures article {
   font-size: 0.8rem;
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -749,30 +750,38 @@ footer .secondaryContainer {
 }
 
 .contactPage {
-  background-image: url(/assets/picture/apelieOfficeMobile.jpg);
+  background-image: url(/assets/picture/chickens2.jpg);
   background-size: cover;
-  height: 100vh;
+  padding: 15vh 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.contactPage .bgMask {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .contactPage .contactFormContainer {
   background-color: white;
-  width: 80%;
+  width: 100%;
   padding: 5%;
   border-radius: 0.75rem;
+  position: relative;
+  z-index: 2;
 }
-.contactPage .contactFormContainer h1 {
-  font-size: 1.5rem;
-}
-.contactPage .contactFormContainer .line {
-  border-bottom: 2px solid;
-  width: 15%;
-  margin: 5% 0;
+.contactPage .contactFormContainer .titles p {
+  font-size: 0.8rem;
+  color: #6a6a6a;
 }
 .contactPage .contactFormContainer .contactForm .inputContainer {
   font-size: 0.8rem;
+  color: #6a6a6a;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -786,9 +795,24 @@ footer .secondaryContainer {
   background-color: #d9d9d9;
   border: none;
   padding: 5px;
+  color: inherit;
+  outline: none;
 }
 .contactPage .contactFormContainer .contactForm .inputContainer textarea {
-  height: 15vh;
+  resize: none;
+}
+.contactPage .contactFormContainer .contactForm .sendButtonContainer p {
+  font-size: 0.8rem;
+  color: #6a6a6a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.contactPage .contactFormContainer .contactForm .sendButtonContainer .button--outline {
+  color: #f7941e;
+}
+.contactPage .contactFormContainer .contactForm .sendButtonContainer .error {
+  font-size: 0.8rem;
+  color: rgb(244, 64, 64);
 }
 
 @media (min-width: 1024px) {

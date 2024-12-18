@@ -38,7 +38,7 @@ const CarouselMobile = ({ children }) => {
     <div className="carouselContainer">
       <button
         onClick={() => scroll("left")}
-        className={!canScrollLeft && "disabled"}
+        className={!canScrollLeft ? "disabled" : ""}
       >
         <FaChevronLeft />
       </button>
@@ -51,7 +51,7 @@ const CarouselMobile = ({ children }) => {
       </div>
       <button
         onClick={() => scroll("right")}
-        className={!canScrollRight && "disabled"}
+        className={!canScrollRight ? "disabled" : ""}
       >
         <FaChevronRight />
       </button>

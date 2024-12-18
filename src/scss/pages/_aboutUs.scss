@@ -15,14 +15,15 @@
     margin-bottom: 15vh;
 
     .pictures {
-      @include dflex(space-evenly, row);
-      flex-wrap: wrap;
+      @include dflex(center, row);
+      gap: 25px;
       row-gap: 45px;
+      flex-wrap: wrap;
       margin-bottom: 45px;
 
       article {
         font-size: 0.8rem;
-        width: 40%;
+        width: 30%;
         @include dflex(start, column, start);
         gap: 10px;
 
