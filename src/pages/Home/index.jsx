@@ -1,14 +1,18 @@
 import poultryArticle from "/assets/file/poultryArticleConicetApelie.pdf";
 import {
-  avisense,
+  flockerMobile,
   boots,
   illustration1,
   illustration2,
   illustration3,
   locationIcon,
   validationMobile,
+  illustration4,
+  app,
+  poultryScience,
 } from "../../assets";
 import TrialForm from "../../components/TrialForm";
+import CarouselMobile from "../../components/CarouselMobile";
 
 const Home = () => {
   return (
@@ -20,19 +24,21 @@ const Home = () => {
           <h2>
             <i>Who</i> will take care of your farm in the next years?
           </h2>
-          <p>Our Flocker robots, can.</p>
+          <p>
+            Our <b>Flocker robots</b>, can.
+          </p>
         </div>
         <div className="buttonContainer">
           <a href="#trial" className="button button--solid">
             Book your trial now
           </a>
-          <a href="" className="button button--outline">
+          <a href="#video" className="button button--outline">
             Watch the video
           </a>
         </div>
       </section>
 
-      <section className="section2">
+      <section className="section2" id="solution">
         <div className="titles">
           <h2>Flocker Robot</h2>
           <p>
@@ -40,14 +46,14 @@ const Home = () => {
             robot and its dedicated app.
           </p>
         </div>
-        <div className="cardsContainer">
+        <CarouselMobile>
           <article className="card">
             <div className="imgContainer">
-              <img src={avisense} alt="Flocker robot" />
+              <img src={flockerMobile} alt="Flocker robot" />
             </div>
             <h3>About the Flocker Robot</h3>
             <p>
-              Its a Mobile, autonomous, and intelligent robot designed to be an
+              It's a Mobile, autonomous, and intelligent robot designed to be an
               assistant in the raising of broiler chickens, moving through the
               sheds to stimulate the birds and collect environmental data such
               as temperature, humidity, and photos of the animals.
@@ -55,10 +61,7 @@ const Home = () => {
           </article>
           <article className="card">
             <div className="imgContainer appContainer">
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/012/871/561/non_2x/realistic-smartphone-mockup-vertical-mobile-device-concept-for-presentation-information-graphics-app-display-png.png"
-                alt="Mobile Flocker app"
-              />
+              <img src={app} alt="Mobile Flocker app" />
             </div>
             <h3>About the App</h3>
             <p>
@@ -72,7 +75,7 @@ const Home = () => {
               track.
             </p>
           </article>
-        </div>
+        </CarouselMobile>
       </section>
 
       <section className="section3">
@@ -80,27 +83,21 @@ const Home = () => {
         <div className="benefitsContainer">
           <article>
             <img src={illustration1} alt="Production illustration" />
-            <p>
-              <b>Increase production</b> index per year
-            </p>
+            <p>Biosecurity</p>
           </article>
           <article>
             <img src={illustration2} alt="Precision illustration" />
-            <p>
-              <b>Precision Livestock</b> farming
-            </p>
+            <p>Precision Livestock farming</p>
           </article>
           <article>
             <img
               src={illustration3}
               alt="Traceability and quality illustration"
             />
-            <p>
-              <b>Traceability</b> for consumers and <b>better meat quality</b>
-            </p>
+            <p>Tackle Labour Shortage</p>
           </article>
           <article>
-            <img src={illustration1} alt="Animal welfare illustration" />
+            <img src={illustration4} alt="Animal welfare illustration" />
             <p>Animal Welfare</p>
           </article>
         </div>
@@ -175,8 +172,8 @@ const Home = () => {
             One of Avisense's key pillars is it's commitment to affordability.
           </b>
         </p>
-        <div className="bootsContainer">
-          <img src={boots} alt="Boots" />
+        <div className="articleContainer">
+          <img src={poultryScience} alt="Poultry Science magazine article" />
           <a
             href={poultryArticle}
             target="_blank"
@@ -259,7 +256,7 @@ const Home = () => {
         </div> */}
       </div>
 
-      <section className="section6">
+      <section className="section6" id="video">
         <h2>
           An intelligent robot to get rid of <i>tedious</i> or <i>repetitive</i>{" "}
           tasks.
@@ -296,7 +293,7 @@ const Home = () => {
         /> */}
       </div>
 
-      <section className="section8">
+      <section className="section8" id="trial">
         <TrialForm />
       </section>
     </main>

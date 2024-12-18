@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import avisenseLOGO from "/assets/logo/LOGOS-01.png";
-import ApelieISOLOGO from "/assets/logo/apelieISOLOGO.png";
+import { apelieIsologo, aviRobotsLogo } from "../../assets";
 
 const MobileNavBar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -17,10 +16,7 @@ const MobileNavBar = () => {
         <AiOutlineMenu />
       </button>
       <Link to="/" className="mobileNav__Logo">
-        <img src={avisenseLOGO} alt="Logo"></img>
-        {/* <span>
-          <i>by Apelie Robotics</i>
-        </span> */}
+        <img src={aviRobotsLogo} alt="Logo"></img>
       </Link>
       <div className={`mobileMenu ${menuToggle ? "" : "mobileMenu--closed"}`}>
         <div className="mobileMenu__LinkContainer">
@@ -34,13 +30,13 @@ const MobileNavBar = () => {
           <Link to="/" className="mobileMenu__Link" onClick={clickToggler}>
             Home
           </Link>
-          <Link
-            to="/#solution"
+          <a
+            href="/#solution"
             className="mobileMenu__Link"
             onClick={clickToggler}
           >
             Our solution
-          </Link>
+          </a>
           <Link to="/us" className="mobileMenu__Link" onClick={clickToggler}>
             About us
           </Link>
@@ -51,20 +47,20 @@ const MobileNavBar = () => {
           >
             Contact us
           </Link>
-          <Link
-            to="/#trial"
+          <a
+            href="/#trial"
             className="mobileMenu__Link mobileMenu__Link--Highlight"
             onClick={clickToggler}
           >
             Book a trial!
-          </Link>
+          </a>
         </div>
         <div className="mobileMenu__Bottom">
           <span className="mobileMenu__BottomText">
             Johns Creek, Georgia USA
           </span>
           <img
-            src={ApelieISOLOGO}
+            src={apelieIsologo}
             alt="Logo"
             className="mobileMenu__BottomLogo"
           ></img>

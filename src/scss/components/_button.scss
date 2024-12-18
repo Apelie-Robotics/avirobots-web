@@ -27,6 +27,6 @@
   &--outline {
     background-color: transparent;
     border: solid 2px map-get($colors, "primary");
-    color: map-get($colors, "light");
+    color: map-get($colors, "dark");
   }
 }

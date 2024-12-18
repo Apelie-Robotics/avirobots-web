@@ -103,6 +103,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 5%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: white;
 }
 @media (min-width: 1024px) {
   .mobileNav {
@@ -193,7 +197,7 @@
   justify-content: space-between;
 }
 .mobileNav .mobileMenu__BottomText {
-  color: black;
+  color: #6a6a6a;
   font-size: 0.7rem;
 }
 .mobileNav .mobileMenu__BottomLogo {
@@ -312,65 +316,43 @@ footer .secondaryContainer p {
 .button--outline {
   background-color: transparent;
   border: solid 2px #f7941e;
-  color: white;
+  color: black;
 }
 
-.carouselContainerMobile {
-  width: 100%;
-  height: 80vw;
-  padding-top: 2.5vw;
-  overflow: hidden;
-}
-.carouselContainerMobile .carouselWrapper {
-  display: flex;
+.carouselContainer {
   position: relative;
+  width: 100%;
 }
-.carouselContainerMobile .carouselWrapper img {
-  transition: left 0.3s ease, right 0.3s ease, top 0.3s ease, height 0.3s ease;
+.carouselContainer button {
   position: absolute;
-  object-fit: cover;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.28);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: fit-content;
+  background: none;
+  border: none;
+  color: #6a6a6a;
+  font-size: 2rem;
 }
-.carouselContainerMobile .carouselWrapper .active {
-  height: 75vw;
-  max-width: 75%;
-  left: 15vw;
-  z-index: 2;
-  top: 0;
+.carouselContainer button:first-of-type {
+  left: 0;
 }
-.carouselContainerMobile .carouselWrapper .inactiveLeft,
-.carouselContainerMobile .carouselWrapper .inactiveRight {
-  height: 50vw;
-  max-width: 50%;
-  z-index: 1;
-  top: 5vh;
+.carouselContainer .disabled {
+  display: none;
 }
-.carouselContainerMobile .carouselWrapper .inactiveLeft {
-  left: 2.5%;
+.carouselContainer .carouselMobile {
+  display: flex;
+  gap: 20px;
+  padding: 0 15px;
+  padding-top: 15px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
-.carouselContainerMobile .carouselWrapper .inactiveRight {
-  left: 47.5%;
-}
-.carouselContainerMobile .carouselWrapper .secondInactiveRight,
-.carouselContainerMobile .carouselWrapper .secondInactiveLeft {
-  height: 30vw;
-  max-width: 30%;
-  z-index: 0;
-  top: 10vh;
-}
-.carouselContainerMobile .carouselWrapper .secondInactiveLeft {
-  left: -15vw;
-}
-.carouselContainerMobile .carouselWrapper .secondInactiveRight {
-  left: calc(100% - 15vw);
-}
-.carouselContainerMobile .carouselWrapper .inactive {
-  width: 0;
-}
-@media (min-width: 768px) {
-  .carouselContainerMobile {
-    display: none;
-  }
+.carouselContainer .carouselMobile::-webkit-scrollbar {
+  display: none;
 }
 
 .carouselAndBtnContainer {
@@ -492,6 +474,7 @@ footer .secondaryContainer p {
   width: 100%;
   border: none;
   background-color: #d9d9d9;
+  color: #6a6a6a;
   padding: 5px;
   outline: none;
 }
@@ -541,13 +524,15 @@ footer .secondaryContainer p {
   justify-content: space-between;
   margin: 15px;
   margin-bottom: 0;
-  padding: 35px 30px 35% 20px;
-  border-radius: 20px;
-  background-color: #343434;
-  color: white;
+  padding: 35px 30px 65% 20px;
+  border-radius: 35px;
+  background-image: url("/assets/picture/heroMobile.jpg");
+  background-size: cover;
+  color: #3a3a3a;
 }
 .home .section1 h2 {
   font-size: 2rem;
+  line-height: 2rem;
 }
 .home .section1 p {
   margin-top: 5px;
@@ -558,7 +543,14 @@ footer .secondaryContainer p {
   flex-direction: column;
   align-items: start;
   justify-content: end;
-  gap: 25px;
+  gap: 20px;
+}
+.home .section1 .buttonContainer .button {
+  width: 100%;
+  text-align: center;
+}
+.home .section1 .buttonContainer .button--outline {
+  color: #3a3a3a;
 }
 .home .section2 .titles {
   margin: 2.5vh 30px;
@@ -570,21 +562,7 @@ footer .secondaryContainer p {
   font-size: 0.8rem;
   color: #6a6a6a;
 }
-.home .section2 .cardsContainer {
-  display: flex;
-  gap: 20px;
-  padding: 0 15px;
-  padding-top: 15px;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.home .section2 .cardsContainer::-webkit-scrollbar {
-  display: none;
-}
-.home .section2 .cardsContainer .card {
+.home .section2 .card {
   background-color: #eeeeee;
   padding: 25px 15px;
   border-radius: 20px;
@@ -592,10 +570,10 @@ footer .secondaryContainer p {
   height: fit-content;
   scroll-snap-align: center;
 }
-.home .section2 .cardsContainer .card > *:not(:first-child) {
+.home .section2 .card > *:not(:first-child) {
   margin-top: 2.5vh;
 }
-.home .section2 .cardsContainer .card .imgContainer {
+.home .section2 .card .imgContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -605,17 +583,18 @@ footer .secondaryContainer p {
   background-color: #201c1c;
   border-radius: 20px;
 }
-.home .section2 .cardsContainer .card .imgContainer img {
+.home .section2 .card .imgContainer img {
   height: 100%;
+  border-radius: 20px;
 }
-.home .section2 .cardsContainer .card p {
+.home .section2 .card p {
   font-size: 0.8rem;
   color: #6a6a6a;
 }
-.home .section2 .cardsContainer .card .appContainer {
+.home .section2 .card .appContainer {
   position: relative;
 }
-.home .section2 .cardsContainer .card .appContainer img {
+.home .section2 .card .appContainer img {
   position: absolute;
   height: 130%;
   right: 5%;
@@ -623,8 +602,10 @@ footer .secondaryContainer p {
   transform: translateY(-50%);
 }
 .home .section3 {
-  margin-left: 30px;
-  margin-right: 30px;
+  background: url("/assets/picture/chickensMobile.jpg");
+  background-size: cover;
+  padding: 50px 15%;
+  color: white;
 }
 .home .section3 h2 {
   text-align: center;
@@ -634,24 +615,27 @@ footer .secondaryContainer p {
   display: flex;
   flex-direction: row;
   align-items: start;
-  justify-content: space-evenly;
-  row-gap: 25px;
+  justify-content: space-between;
+  gap: 25px;
   flex-wrap: wrap;
 }
 .home .section3 .benefitsContainer article {
-  width: 40vw;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
 }
+.home .section3 .benefitsContainer article img {
+  height: 10vh;
+}
 .home .section3 .benefitsContainer article p {
   text-align: center;
   font-size: 0.8rem;
 }
 .home .section4 {
-  padding: 15px 30px;
+  padding: 15px;
   padding-bottom: 30px;
   background-color: grey;
   color: white;
@@ -689,16 +673,21 @@ footer .secondaryContainer p {
   font-size: 0.8rem;
   color: #4a4a4a;
 }
-.home .section5 .bootsContainer {
+.home .section5 .articleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-left: 15px;
+}
+.home .section5 .articleContainer img {
+  width: 50%;
+  transform: rotate(5deg);
   position: relative;
+  left: 40%;
 }
-.home .section5 .bootsContainer img {
-  width: 50vw;
-}
-.home .section5 .bootsContainer .button {
-  position: absolute;
-  top: 15%;
-  right: 7.5%;
+.home .section5 .articleContainer .button {
   white-space: nowrap;
 }
 .home .section6 {
@@ -727,7 +716,8 @@ footer .secondaryContainer p {
 }
 .home .section8 {
   background: url("/assets/picture/sawdustMobile.jpg");
-  padding: 30px;
+  background-size: cover;
+  padding: 45px 30px;
 }
 
 .aboutUs {

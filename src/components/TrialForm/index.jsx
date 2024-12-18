@@ -60,8 +60,8 @@ const TrialForm = () => {
           </select>
         </div>
         <div className="input">
-          <label htmlFor="location">Location *</label>
-          <input type="text" id="location" name="location" required />
+          <label htmlFor="location">Location</label>
+          <input type="text" id="location" name="location" />
           <ValidationError
             field="location"
             errors={state.errors}
@@ -78,13 +78,8 @@ const TrialForm = () => {
           />
         </div>
         <div className="input">
-          <label htmlFor="numberOfHouses">Number of houses *</label>
-          <input
-            type="number"
-            id="numberOfHouses"
-            name="numberOfHouses"
-            required
-          />
+          <label htmlFor="numberOfHouses">Number of houses</label>
+          <input type="number" id="numberOfHouses" name="numberOfHouses" />
           <ValidationError
             field="numberOfHouses"
             errors={state.errors}
@@ -93,22 +88,12 @@ const TrialForm = () => {
         </div>
         <div className="dateTimeInputs">
           <div className="input">
-            <label htmlFor="dateOfPreference">Date of preference *</label>
-            <input
-              type="date"
-              id="dateOfPreference"
-              name="dateOfPreference"
-              required
-            />
+            <label htmlFor="dateOfPreference">Date of preference</label>
+            <input type="date" id="dateOfPreference" name="dateOfPreference" />
           </div>
           <div className="input">
-            <label htmlFor="timeOfPreference">Time of preference *</label>
-            <input
-              type="time"
-              id="timeOfPreference"
-              name="timeOfPreference"
-              required
-            />
+            <label htmlFor="timeOfPreference">Time of preference</label>
+            <input type="time" id="timeOfPreference" name="timeOfPreference" />
           </div>
         </div>
         <ValidationError
@@ -122,8 +107,8 @@ const TrialForm = () => {
           className="error"
         />
         <div className="input">
-          <label htmlFor="message">Message *</label>
-          <textarea name="message" id="message" rows={4} required></textarea>
+          <label htmlFor="message">Message</label>
+          <textarea name="message" id="message" rows={4}></textarea>
           <ValidationError
             field="message"
             errors={state.errors}

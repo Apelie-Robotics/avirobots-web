@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import MobileNavBar from "../MobileNavBar";
-import avisenseLOGO from "/assets/logo/LOGOS-01.png";
+// import avisenseLOGO from "/assets/logo/LOGOS-01.png";
 
 const NavBar = () => {
   return (
@@ -8,8 +8,7 @@ const NavBar = () => {
       <MobileNavBar />
       <nav className="nav">
         <Link to="/" className="nav__Logo">
-          <img src={avisenseLOGO} alt="Logo" />
-          
+          {/* <img src={avisenseLOGO} alt="Logo" /> */}
         </Link>
         <div className="nav__LinkContainer">
           <NavLink to="/" className="nav__Link">

@@ -31,6 +31,7 @@
         width: 100%;
         border: none;
         background-color: #d9d9d9;
+        color: map-get($colors, "dark2");
         padding: 5px;
         outline: none;
       }
