@@ -1,135 +1,70 @@
 .aboutUs {
-  background-color: #000000;
-  color: map-get($colors, "light");
+  background-color: #f5f5f5;
+  color: #2e2d2d;
+  padding-top: 30px;
 
   h1 {
+    color: #2e2d2d;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
     text-align: center;
-    padding: 5vh 0;
-    font-weight: 600;
-    font-size: 1.5rem;
   }
 
-  .teamPhotoContainer {
-    position: relative;
-    .teamPhoto {
-      width: 100%;
-    }
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 5vh;
-      position: absolute;
-      inset: 0;
-      top: calc(100% - 5vh);
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.693) 80%,
-        rgb(0, 0, 0) 100%
-      );
-    }
-  }
+  .contentContainer {
+    padding: 0 30px;
+    margin-bottom: 15vh;
 
-  .section1 {
-    @include dflex();
-    padding: 7.5vh 10%;
-    text-align: center;
-    gap: 2.5vh;
-    img {
-      width: 25vw;
-    }
-    .weAre {
-      margin-top: 7.5vh;
-    }
-  }
+    .pictures {
+      @include dflex(space-evenly, row);
+      flex-wrap: wrap;
+      row-gap: 45px;
+      margin-bottom: 45px;
 
-  .section2 {
-    @include dflex();
-    padding: 12.5vh 10%;
-    gap: 1.5vh;
-    p {
-      color: rgb(182, 182, 182);
-      text-align: center;
-      font-size: 0.75rem;
-    }
-    .button {
-      text-decoration: underline;
-    }
-  }
-
-  .section3 {
-    @include dflex();
-    padding: 0 10%;
-    padding-bottom: 7.5vh;
-    gap: 5vh;
-
-    h2 {
-      font-weight: 600;
-    }
-
-    .title {
-      display: none;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .section4 {
-    @include dflex();
-    padding: 7.5vh 0;
-    img {
-      width: 100%;
-    }
-  }
-}
-
-@include tablet {
-  .aboutUs {
-    h1 {
-      padding-top: 10vh;
-    }
-
-    .section1 {
-      padding: 7.5vh 25%;
-      img {
-        width: 15vh;
-      }
-    }
-
-    .section2 {
-      @include dflex(space-between, row);
-      padding: 12.5vh 25%;
-    }
-
-    .section3 {
-      padding: 7.5vh 15%;
-      @include dflex(center, row);
-      .titleMobile {
-        display: none;
-      }
-      .text {
-        flex-shrink: 0;
+      article {
+        font-size: 0.8rem;
         width: 40%;
-        @include dflex(space-between, column, start);
-        gap: 2.5vh;
-        font-size: 0.75rem;
-        .title {
-          display: block;
-          font-size: 2rem;
+        @include dflex(start, column, start);
+        gap: 10px;
+
+        h3 {
+          font-weight: 400;
+          font-size: inherit;
+        }
+        .position {
+          font-weight: 700;
+        }
+        .hq {
+          font-style: italic;
         }
       }
     }
 
-    .section4 {
-      flex-direction: row;
-      padding-bottom: 0;
-      img {
-        height: 50vh;
-        object-fit: cover;
+    .text {
+      font-size: 0.8rem;
+      text-align: center;
+
+      p {
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
       }
+    }
+  }
+
+  .supportersContainer {
+    padding-bottom: 15vh;
+
+    h2 {
+      color: map-get($colors, "dark2");
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    button {
+      color: map-get($colors, "primary");
+    }
+    .supporterLogo {
+      height: 10vh;
     }
   }
 }

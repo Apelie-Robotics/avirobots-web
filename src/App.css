@@ -684,141 +684,70 @@ footer .secondaryContainer {
 }
 
 .aboutUs {
-  background-color: #000000;
-  color: white;
+  background-color: #f5f5f5;
+  color: #2e2d2d;
+  padding-top: 30px;
 }
 .aboutUs h1 {
+  color: #2e2d2d;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
   text-align: center;
-  padding: 5vh 0;
-  font-weight: 600;
-  font-size: 1.5rem;
 }
-.aboutUs .teamPhotoContainer {
-  position: relative;
+.aboutUs .contentContainer {
+  padding: 0 30px;
+  margin-bottom: 15vh;
 }
-.aboutUs .teamPhotoContainer .teamPhoto {
-  width: 100%;
+.aboutUs .contentContainer .pictures {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 45px;
+  margin-bottom: 45px;
 }
-.aboutUs .teamPhotoContainer::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5vh;
-  position: absolute;
-  inset: 0;
-  top: calc(100% - 5vh);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.693) 80%, rgb(0, 0, 0) 100%);
-}
-.aboutUs .section1 {
+.aboutUs .contentContainer .pictures article {
+  font-size: 0.8rem;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 7.5vh 10%;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+.aboutUs .contentContainer .pictures article h3 {
+  font-weight: 400;
+  font-size: inherit;
+}
+.aboutUs .contentContainer .pictures article .position {
+  font-weight: 700;
+}
+.aboutUs .contentContainer .pictures article .hq {
+  font-style: italic;
+}
+.aboutUs .contentContainer .text {
+  font-size: 0.8rem;
   text-align: center;
-  gap: 2.5vh;
 }
-.aboutUs .section1 img {
-  width: 25vw;
+.aboutUs .contentContainer .text p:not(:last-of-type) {
+  margin-bottom: 15px;
 }
-.aboutUs .section1 .weAre {
-  margin-top: 7.5vh;
+.aboutUs .supportersContainer {
+  padding-bottom: 15vh;
 }
-.aboutUs .section2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12.5vh 10%;
-  gap: 1.5vh;
-}
-.aboutUs .section2 p {
-  color: rgb(182, 182, 182);
+.aboutUs .supportersContainer h2 {
+  color: #6a6a6a;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
 }
-.aboutUs .section2 .button {
-  text-decoration: underline;
+.aboutUs .supportersContainer button {
+  color: #f7941e;
 }
-.aboutUs .section3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10%;
-  padding-bottom: 7.5vh;
-  gap: 5vh;
-}
-.aboutUs .section3 h2 {
-  font-weight: 600;
-}
-.aboutUs .section3 .title {
-  display: none;
-}
-.aboutUs .section3 img {
-  width: 100%;
-}
-.aboutUs .section4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 7.5vh 0;
-}
-.aboutUs .section4 img {
-  width: 100%;
+.aboutUs .supportersContainer .supporterLogo {
+  height: 10vh;
 }
 
-@media (min-width: 768px) {
-  .aboutUs h1 {
-    padding-top: 10vh;
-  }
-  .aboutUs .section1 {
-    padding: 7.5vh 25%;
-  }
-  .aboutUs .section1 img {
-    width: 15vh;
-  }
-  .aboutUs .section2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12.5vh 25%;
-  }
-  .aboutUs .section3 {
-    padding: 7.5vh 15%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .aboutUs .section3 .titleMobile {
-    display: none;
-  }
-  .aboutUs .section3 .text {
-    flex-shrink: 0;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    gap: 2.5vh;
-    font-size: 0.75rem;
-  }
-  .aboutUs .section3 .text .title {
-    display: block;
-    font-size: 2rem;
-  }
-  .aboutUs .section4 {
-    flex-direction: row;
-    padding-bottom: 0;
-  }
-  .aboutUs .section4 img {
-    height: 50vh;
-    object-fit: cover;
-  }
-}
 .contactPage {
   background-image: url(/assets/picture/apelieOfficeMobile.jpg);
   background-size: cover;
