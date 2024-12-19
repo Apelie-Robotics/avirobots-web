@@ -33,4 +33,26 @@ footer {
     text-align: end;
     padding: 15px 30px;
   }
+
+  @include pc() {
+    .mainContainer {
+      padding-bottom: 15px;
+      padding-right: 15%;
+
+      .leftContainer {
+        img {
+          width: 10vw;
+        }
+      }
+
+      .rightContainer {
+        align-items: start;
+        padding-top: 15px;
+      }
+    }
+
+    .secondaryContainer {
+      padding-right: 15%;
+    }
+  }
 }
