@@ -68,4 +68,46 @@
       height: 10vh;
     }
   }
+
+  @include pc() {
+    padding: 15vh 15vw;
+
+    h1 {
+      font-size: 2.2rem;
+      text-align: start;
+    }
+
+    .contentContainer {
+      @include dflex(space-between, column-reverse);
+      padding: 0;
+
+      .text {
+        text-align: start;
+        margin-bottom: 10vh;
+      }
+
+      .pictures {
+        gap: 50px;
+        article {
+          width: fit-content;
+        }
+      }
+    }
+
+    .supportersContainer {
+      margin-top: 25px;
+      @include dflex();
+      .supportersLogos {
+        width: 80%;
+        @include dflex(center, row);
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .supporterLogo {
+          height: auto;
+          width: 25%;
+        }
+      }
+    }
+  }
 }

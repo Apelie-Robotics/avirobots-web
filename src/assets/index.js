@@ -19,12 +19,21 @@ export { default as staff2 } from "/assets/picture/staff2.jpg";
 export { default as staff3 } from "/assets/picture/staff3.jpg";
 export { default as staff4 } from "/assets/picture/staff4.jpg";
 export { default as staff5 } from "/assets/picture/staff5.jpg";
+export { default as staff1Pc } from "/assets/picture/staff1Pc.jpg";
+export { default as staff2Pc } from "/assets/picture/staff2Pc.jpg";
+export { default as staff3Pc } from "/assets/picture/staff3Pc.jpg";
+export { default as staff4Pc } from "/assets/picture/staff4Pc.jpg";
+export { default as staff5Pc } from "/assets/picture/staff5Pc.jpg";
 export { default as supporter1 } from "/assets/picture/supporter1.png";
 export { default as supporter2 } from "/assets/picture/supporter2.png";
 export { default as supporter3 } from "/assets/picture/supporter3.png";
 export { default as supporter4 } from "/assets/picture/supporter4.png";
 export { default as supporter5 } from "/assets/picture/supporter5.png";
 export { default as supporter6 } from "/assets/picture/supporter6.png";
+export { default as supporter1Pc } from "/assets/picture/supporter1Pc.png";
+export { default as supporter2Pc } from "/assets/picture/supporter2Pc.png";
+export { default as supporter3Pc } from "/assets/picture/supporter3Pc.png";
+export { default as supporter5Pc } from "/assets/picture/supporter5Pc.png";
 
 // Logos
 export { default as aviRobotsLogo } from "/assets/logo/aviRobotsLogo.png";

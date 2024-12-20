@@ -1061,6 +1061,52 @@ footer .secondaryContainer {
 .aboutUs .supportersContainer .supporterLogo {
   height: 10vh;
 }
+@media (min-width: 1024px) {
+  .aboutUs {
+    padding: 15vh 15vw;
+  }
+  .aboutUs h1 {
+    font-size: 2.2rem;
+    text-align: start;
+  }
+  .aboutUs .contentContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .aboutUs .contentContainer .text {
+    text-align: start;
+    margin-bottom: 10vh;
+  }
+  .aboutUs .contentContainer .pictures {
+    gap: 50px;
+  }
+  .aboutUs .contentContainer .pictures article {
+    width: fit-content;
+  }
+  .aboutUs .supportersContainer {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .aboutUs .supportersContainer .supportersLogos {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .aboutUs .supportersContainer .supportersLogos .supporterLogo {
+    height: auto;
+    width: 25%;
+  }
+}
 
 .contactPage {
   background-image: url(/assets/picture/chickens2.jpg);
