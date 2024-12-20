@@ -37,7 +37,7 @@ const Contact = () => {
             <label htmlFor="country">Country*</label>
             <input type="text" id="country" name="country" required />
           </div>
-          <div className="inputContainer">
+          <div className="inputContainer message">
             <label htmlFor="message">Message*</label>
             <textarea id="message" name="message" rows={5}></textarea>
           </div>

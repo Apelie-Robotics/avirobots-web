@@ -69,48 +69,33 @@
       }
     }
   }
-}
 
-@include pc {
-  .contactPage {
-    height: auto;
-    padding: 20vh 0;
-    background-image: url(/assets/picture/apelieOffice.jpg);
-    background-size: cover;
+  @include pc {
+    background-image: url(/assets/picture/chickens2Pc.jpg);
+    padding: 20vh 25vw;
 
-    .contactForm {
-      @include dgrid();
-      grid-template:
-        "name email" auto
-        "phone country" auto
-        "message message" auto
-        "submit submit" auto
-        / 1fr 1fr;
-      column-gap: 5vw;
-      .name {
-        grid-area: name;
+    .bgMask {
+      display: none;
+    }
+
+    .contactFormContainer {
+      .titles {
+        margin-bottom: 25px;
       }
-      .email {
-        grid-area: email;
-      }
-      .phone {
-        grid-area: phone;
-      }
-      .country {
-        grid-area: country;
-      }
-      .message {
-        grid-area: message;
-        textarea {
-          height: 25vh;
+
+      .contactForm {
+        @include dflex(space-between, row);
+        flex-wrap: wrap;
+        row-gap: 25px;
+
+        .inputContainer {
+          margin: 0;
+          width: 45%;
         }
-      }
-      .button {
-        grid-area: submit;
-        justify-self: self-start;
-      }
-      .inputContainer {
-        width: 100%;
+
+        .message {
+          width: 100%;
+        }
       }
     }
   }

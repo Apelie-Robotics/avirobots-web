@@ -1173,47 +1173,34 @@ footer .secondaryContainer {
   font-size: 0.8rem;
   color: rgb(244, 64, 64);
 }
-
 @media (min-width: 1024px) {
   .contactPage {
-    height: auto;
-    padding: 20vh 0;
-    background-image: url(/assets/picture/apelieOffice.jpg);
-    background-size: cover;
+    background-image: url(/assets/picture/chickens2Pc.jpg);
+    padding: 20vh 25vw;
   }
-  .contactPage .contactForm {
-    display: grid;
+  .contactPage .bgMask {
+    display: none;
+  }
+  .contactPage .contactFormContainer .titles {
+    margin-bottom: 25px;
+  }
+  .contactPage .contactFormContainer .contactForm {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
-    grid-template: "name email" auto "phone country" auto "message message" auto "submit submit" auto/1fr 1fr;
-    column-gap: 5vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 25px;
   }
-  .contactPage .contactForm .name {
-    grid-area: name;
+  .contactPage .contactFormContainer .contactForm .inputContainer {
+    margin: 0;
+    width: 45%;
   }
-  .contactPage .contactForm .email {
-    grid-area: email;
-  }
-  .contactPage .contactForm .phone {
-    grid-area: phone;
-  }
-  .contactPage .contactForm .country {
-    grid-area: country;
-  }
-  .contactPage .contactForm .message {
-    grid-area: message;
-  }
-  .contactPage .contactForm .message textarea {
-    height: 25vh;
-  }
-  .contactPage .contactForm .button {
-    grid-area: submit;
-    justify-self: self-start;
-  }
-  .contactPage .contactForm .inputContainer {
+  .contactPage .contactFormContainer .contactForm .message {
     width: 100%;
   }
 }
+
 .errorPage {
   height: 80vh;
   display: flex;
