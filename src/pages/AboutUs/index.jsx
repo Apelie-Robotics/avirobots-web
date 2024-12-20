@@ -31,7 +31,7 @@ const AboutUs = () => {
           <article>
             <picture>
               <source srcSet={staff1Pc} media="(min-width: 1024px)" />
-              <img src={staff1} alt="Arch. Lucas Jagodnik" />
+              <img src={staff1} alt="Arch. Lucas Jagodnik" loading="eager" />
             </picture>
             <h3>
               Arch. Lucas <b>Jagodnik</b>
@@ -44,7 +44,7 @@ const AboutUs = () => {
           <article>
             <picture>
               <source srcSet={staff2Pc} media="(min-width: 1024px)" />
-              <img src={staff2} alt="Des. Tadeo Cernusco" />
+              <img src={staff2} alt="Des. Tadeo Cernusco" loading="eager" />
             </picture>
             <h3>
               Des. Tadeo <b>Cernusco</b>
@@ -57,7 +57,7 @@ const AboutUs = () => {
           <article>
             <picture>
               <source srcSet={staff3Pc} media="(min-width: 1024px)" />
-              <img src={staff3} alt="Eng. Facundo Garzón" />
+              <img src={staff3} alt="Eng. Facundo Garzón" loading="eager" />
             </picture>
             <h3>
               Eng. Facundo <b>Garzón</b>
@@ -70,7 +70,7 @@ const AboutUs = () => {
           <article>
             <picture>
               <source srcSet={staff4Pc} media="(min-width: 1024px)" />
-              <img src={staff4} alt="Des. Sol Rosenwald" />
+              <img src={staff4} alt="Des. Sol Rosenwald" loading="eager" />
             </picture>
             <h3>
               Des. Sol <b>Rosenwald</b>
@@ -83,7 +83,7 @@ const AboutUs = () => {
           <article>
             <picture>
               <source srcSet={staff5Pc} media="(min-width: 1024px)" />
-              <img src={staff5} alt="Eng. Mateo Giovagnoli" />
+              <img src={staff5} alt="Eng. Mateo Giovagnoli" loading="eager" />
             </picture>
             <h3>Eng. Mateo Giovagnoli</h3>
             <div>
@@ -94,7 +94,7 @@ const AboutUs = () => {
           <article>
             <picture>
               {/* <source srcSet={staff1Pc} media="(min-width: 1024px)" /> */}
-              <img src="" alt="Staff member" />
+              <img src="" alt="Staff member" loading="eager" />
             </picture>
             <h3></h3>
             <p className="position"></p>
@@ -142,23 +142,37 @@ const AboutUs = () => {
               src={supporter1Pc}
               alt="Indacor logo"
               className="supporterLogo"
+              loading="lazy"
             />
             <img
               src={supporter2Pc}
               alt="FEPASA logo"
               className="supporterLogo"
+              loading="lazy"
             />
-            <img src={supporter3Pc} alt="AC logo" className="supporterLogo" />
-            <img src={supporter4} alt="Cladan logo" className="supporterLogo" />
+            <img
+              src={supporter3Pc}
+              alt="AC logo"
+              className="supporterLogo"
+              loading="lazy"
+            />
+            <img
+              src={supporter4}
+              alt="Cladan logo"
+              className="supporterLogo"
+              loading="lazy"
+            />
             <img
               src={supporter5Pc}
               alt="Porta logo"
               className="supporterLogo"
+              loading="lazy"
             />
             <img
               src={supporter6}
               alt="CONICET logo"
               className="supporterLogo"
+              loading="lazy"
             />
           </div>
         )}

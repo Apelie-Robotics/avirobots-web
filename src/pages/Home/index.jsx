@@ -112,6 +112,7 @@ const Home = () => {
 
       <section className="section3">
         <iframe
+          loading="lazy"
           src="https://www.youtube.com/embed/NZfC_F_0eN0?si=RiwaorZFgFpdbigv"
           title="YouTube video player"
           frameBorder="0"
@@ -173,6 +174,7 @@ const Home = () => {
             src={validationMobile}
             alt="Validation graphics"
             className="validation"
+            loading="lazy"
           />
         </picture>
         <div className="references">
@@ -202,6 +204,7 @@ const Home = () => {
           </p>
         </div>
         <iframe
+          loading="lazy"
           src="https://www.youtube.com/embed/NZfC_F_0eN0?si=RiwaorZFgFpdbigv"
           title="YouTube video player"
           frameBorder="0"
@@ -228,7 +231,7 @@ const Home = () => {
           .
         </h2>
         <div className="content">
-          <img src={boots} alt="Boots" className="boots pc" />
+          <img src={boots} alt="Boots" className="boots pc" loading="lazy" />
           <div className="middleContainer">
             <div className="text">
               <p>
@@ -281,6 +284,7 @@ const Home = () => {
               src={poultryScience}
               alt="Poultry Science magazine article"
               className="article"
+              loading="lazy"
             />
             <a
               href={poultryArticle}
