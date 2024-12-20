@@ -8,8 +8,10 @@ export { default as illustration4 } from "/assets/picture/illustration4.png";
 export { default as locationIcon } from "/assets/picture/locationIcon.png";
 export { default as boots } from "/assets/picture/boots.png";
 export { default as validationMobile } from "/assets/picture/validationMobile.png";
+export { default as validationPc } from "/assets/picture/validationPc.png";
 export { default as app } from "/assets/picture/app.png";
 export { default as poultryScience } from "/assets/picture/poultryScience.jpg";
+export { default as robotAndApp } from "/assets/picture/robotAndApp.png";
 
 // About us
 export { default as staff1 } from "/assets/picture/staff1.jpg";

@@ -1,11 +1,12 @@
 .button {
   border-radius: 11px;
   text-decoration: none;
-  padding: 15px 25px;
+  padding: 10px 25px;
   font-size: 0.8rem;
   transition: 0.1s;
   cursor: pointer;
   color: map-get($colors, "light");
+  white-space: nowrap;
 
   &--solid {
     background-color: map-get($colors, "primary");

@@ -9,6 +9,9 @@ import {
   illustration4,
   app,
   poultryScience,
+  robotAndApp,
+  validationPc,
+  boots,
 } from "../../assets";
 import TrialForm from "../../components/TrialForm";
 import CarouselMobile from "../../components/CarouselMobile";
@@ -37,47 +40,107 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section2" id="solution">
-        <div className="titles">
-          <h2>Flocker Robot</h2>
-          <p>
-            Our solution features two systems that work together; the Flocker
-            robot and its dedicated app.
-          </p>
+      <section id="solution" className="section2Container">
+        <div className="section2">
+          <div className="titles">
+            <h2>Flocker Robot</h2>
+            <p>
+              Our solution features two systems that work together; the Flocker
+              robot and its dedicated app.
+            </p>
+          </div>
+          <CarouselMobile>
+            <article className="card">
+              <div className="imgContainer">
+                <img src={flockerMobile} alt="Flocker robot" />
+              </div>
+              <h3>About the Flocker Robot</h3>
+              <p>
+                It's a Mobile, autonomous, and intelligent robot designed to be
+                an assistant in the raising of broiler chickens, moving through
+                the sheds to stimulate the birds and collect environmental data
+                such as temperature, humidity, and photos of the animals.
+              </p>
+            </article>
+            <article className="card">
+              <div className="imgContainer appContainer">
+                <img src={app} alt="Mobile Flocker app" />
+              </div>
+              <h3>About the App</h3>
+              <p>
+                All this data is uploaded in real time to our mobile & desktop
+                app, in which you can find daily scoring, dashboards, real time
+                photos, historic data, improvement suggestions, etc.
+              </p>
+              <p>
+                You can also upload manual information such as mortality, lot
+                number, sex, notes and observations in order to have a complete
+                track.
+              </p>
+            </article>
+          </CarouselMobile>
         </div>
-        <CarouselMobile>
-          <article className="card">
-            <div className="imgContainer">
-              <img src={flockerMobile} alt="Flocker robot" />
-            </div>
-            <h3>About the Flocker Robot</h3>
+
+        <div className="section2Pc">
+          <div className="textContainer">
+            <h2>Flocker Robot</h2>
             <p>
-              It's a Mobile, autonomous, and intelligent robot designed to be an
-              assistant in the raising of broiler chickens, moving through the
-              sheds to stimulate the birds and collect environmental data such
-              as temperature, humidity, and photos of the animals.
-            </p>
-          </article>
-          <article className="card">
-            <div className="imgContainer appContainer">
-              <img src={app} alt="Mobile Flocker app" />
-            </div>
-            <h3>About the App</h3>
-            <p>
-              All this data is uploaded in real time to our mobile & desktop
-              app, in which you can find daily scoring, dashboards, real time
-              photos, historic data, improvement suggestions, etc.
+              <b>Flocker is a Mobile, autonomous, and intelligent</b> robot
+              designed to be an{" "}
+              <b>assistant in the raising of broiler chickens</b>, moving
+              through the sheds to{" "}
+              <b>stimulate the birds and collect environmental data</b> such as
+              temperature, humidity, and photos of the animals.
             </p>
             <p>
-              You can also upload manual information such as mortality, lot
-              number, sex, notes and observations in order to have a complete
-              track.
+              All this data is <b>uploaded in real time</b> to our{" "}
+              <b>mobile & desktop app</b>, in which you{" "}
+              <b>
+                can find daily scoring, dashboards, real time photos , historic
+                data , improvement suggestions, etc.
+              </b>
             </p>
-          </article>
-        </CarouselMobile>
+            <p>
+              You can also upload manual information such as{" "}
+              <b>mortality, lot number, sex, notes and observations</b> in order
+              to have a complete track.
+            </p>
+          </div>
+          <img src={robotAndApp} alt="AviRobot and app" />
+        </div>
       </section>
 
       <section className="section3">
+        <iframe
+          src="https://www.youtube.com/embed/NZfC_F_0eN0?si=RiwaorZFgFpdbigv"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <div className="contentContainer">
+          <div className="titles">
+            <h2>
+              The Robot's Eyes <b>in Real-Time</b>
+            </h2>
+            <p>
+              The Flocker Robot is operating NOW, click below and see through
+              his eyes.
+            </p>
+          </div>
+          <div className="location">
+            <img
+              src={locationIcon}
+              alt="Location icon"
+              className="locationIcon"
+            />
+            <span>Mildmay, Canada.</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="section4">
         <h2>Benefits of our Flocker Robot</h2>
         <div className="benefitsContainer">
           <article>
@@ -102,28 +165,53 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section4">
-        <div className="titles">
+      <div className="section5">
+        <h2>Validation</h2>
+        <picture>
+          <source srcSet={validationPc} media="(min-width: 1024px)" />
+          <img
+            src={validationMobile}
+            alt="Validation graphics"
+            className="validation"
+          />
+        </picture>
+        <div className="references">
+          <div className="reference">
+            <div className="square orange" />
+            <span>
+              Shed <b>without</b> Robot
+            </span>
+          </div>
+          <div className="reference">
+            <div className="square purple" />
+            <span>
+              Shed <b>with</b> Robot
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <section className="section6" id="video">
+        <div className="text">
           <h2>
-            The robot's eyes <b>in real time</b>
+            An intelligent robot to get rid of <i>tedious</i> or{" "}
+            <i>repetitive</i> tasks.
           </h2>
           <p>
-            The Flocker Robot is operating NOW, click below and see through his
-            eyes.
+            We apply <b>robotics and AI</b> to enhance the poultry industry.
           </p>
         </div>
-        {/* <iframe src="" frameborder="0"></iframe> */}
-        <div>
-          <img
-            src={locationIcon}
-            alt="Location icon"
-            className="locationIcon"
-          />
-          <span>Mildmay, Canada.</span>
-        </div>
+        <iframe
+          src="https://www.youtube.com/embed/NZfC_F_0eN0?si=RiwaorZFgFpdbigv"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </section>
 
-      <div className="section5">
+      <div className="section7">
         <h2>
           Our colaboration with{" "}
           <a href="https://www.linkedin.com/company/conicet/" target="_blank">
@@ -139,49 +227,70 @@ const Home = () => {
           </a>
           .
         </h2>
-        <p>
-          This paper serves as an important{" "}
-          <b>milestone in recognizing the capabilities of our robot</b>,
-          AviSense, within the poultry environment. It opens up a universe of
-          potential studies, from exploring further benefits such as improved
-          feed conversion and meat quality to potentially reducing mortality.
-        </p>
-        <p>
-          Our first product is AviSense, an electric robot that{" "}
-          <b>
-            not only encourages animal movement but also enhances soil
-            ventilation
-          </b>{" "}
-          by creating temporary openings.
-        </p>
-        <p>
-          This results in healthier and more productive animals. We've observed
-          a <b>4% increase in productivity</b> compared to houses without
-          robots, translating to{" "}
-          <b>
-            fewer deaths, improved conversion rates, and higher-quality meat
-          </b>
-          . Additionally,{" "}
-          <b>
-            AviSense gathers data on temperature, humidity, and captures images
-          </b>
-          , aiding in the enhancement of poultry farming practices. And there
-          are more features coming. <br />
-          <b>
-            One of Avisense's key pillars is it's commitment to affordability.
-          </b>
-        </p>
-        <div className="articleContainer">
-          <img src={poultryScience} alt="Poultry Science magazine article" />
-          <a
-            href={poultryArticle}
-            target="_blank"
-            className="button button--solid"
-          >
-            Download <i>now</i>
-          </a>
+        <div className="content">
+          <img src={boots} alt="Boots" className="boots pc" />
+          <div className="middleContainer">
+            <div className="text">
+              <p>
+                This paper serves as an important{" "}
+                <b>milestone in recognizing the capabilities of our robot</b>,
+                AviSense, within the poultry environment. It opens up a universe
+                of potential studies, from exploring further benefits such as
+                improved feed conversion and meat quality to potentially
+                reducing mortality.
+              </p>
+              <p>
+                Our first product is AviSense, an electric robot that{" "}
+                <b>
+                  not only encourages animal movement but also enhances soil
+                  ventilation
+                </b>{" "}
+                by creating temporary openings.
+              </p>
+              <p>
+                This results in healthier and more productive animals. We've
+                observed a <b>4% increase in productivity</b> compared to houses
+                without robots, translating to{" "}
+                <b>
+                  fewer deaths, improved conversion rates, and higher-quality
+                  meat
+                </b>
+                . Additionally,{" "}
+                <b>
+                  AviSense gathers data on temperature, humidity, and captures
+                  images
+                </b>
+                , aiding in the enhancement of poultry farming practices. And
+                there are more features coming. <br />
+                <b>
+                  One of Avisense's key pillars is it's commitment to
+                  affordability.
+                </b>
+              </p>
+            </div>
+            <a
+              href={poultryArticle}
+              target="_blank"
+              className="button button--solid pc"
+            >
+              Download
+            </a>
+          </div>
+          <div className="articleContainer">
+            <img
+              src={poultryScience}
+              alt="Poultry Science magazine article"
+              className="article"
+            />
+            <a
+              href={poultryArticle}
+              target="_blank"
+              className="button button--solid mobile"
+            >
+              Download
+            </a>
+          </div>
         </div>
-
         {/* <div className="pc">
           <img src={boots} alt="Boots" />
           <div className="content">
@@ -253,43 +362,6 @@ const Home = () => {
           </div>
           <img src={poultryScience2} alt="Poultry Science article" />
         </div> */}
-      </div>
-
-      <section className="section6" id="video">
-        <h2>
-          An intelligent robot to get rid of <i>tedious</i> or <i>repetitive</i>{" "}
-          tasks.
-        </h2>
-        <p>We apply robotics and AI to enhance the poultry industry.</p>
-        {/* <iframe src="" frameborder="0"></iframe> */}
-      </section>
-
-      <div className="section7">
-        <h2>Validation</h2>
-        {/* <div className="references">
-          <div className="reference">
-            <div className="square orange"></div>
-            <span>
-              Shed <b>without</b> Robot
-            </span>
-          </div>
-          <div className="reference">
-            <div className="square purple"></div>
-            <span>
-              Shed <b>with</b> Robot
-            </span>
-          </div>
-        </div> */}
-        <img
-          src={validationMobile}
-          alt="Validation graphics"
-          className="validation"
-        />
-        {/* <img
-          src={validation}
-          alt="Validation graphics"
-          className="validation"
-        /> */}
       </div>
 
       <section className="section8" id="trial">

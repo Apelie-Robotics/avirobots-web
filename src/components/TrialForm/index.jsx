@@ -40,6 +40,15 @@ const TrialForm = () => {
           />
         </div>
         <div className="input">
+          <label htmlFor="name">Last name *</label>
+          <input type="text" id="lastName" name="lastName" required />
+          <ValidationError
+            field="lastName"
+            errors={state.errors}
+            className="error"
+          />
+        </div>
+        <div className="input">
           <label htmlFor="email">E-mail *</label>
           <input type="email" id="email" name="email" required />
           <ValidationError
@@ -87,11 +96,11 @@ const TrialForm = () => {
           />
         </div>
         <div className="dateTimeInputs">
-          <div className="input">
+          <div className="input date">
             <label htmlFor="dateOfPreference">Date of preference</label>
             <input type="date" id="dateOfPreference" name="dateOfPreference" />
           </div>
-          <div className="input">
+          <div className="input time">
             <label htmlFor="timeOfPreference">Time of preference</label>
             <input type="time" id="timeOfPreference" name="timeOfPreference" />
           </div>
@@ -106,7 +115,7 @@ const TrialForm = () => {
           errors={state.errors}
           className="error"
         />
-        <div className="input">
+        <div className="input message">
           <label htmlFor="message">Message</label>
           <textarea name="message" id="message" rows={4}></textarea>
           <ValidationError
@@ -115,28 +124,27 @@ const TrialForm = () => {
             className="error"
           />
         </div>
-      </div>
-
-      <div className="sendButtonContainer">
-        {state.succeeded ? (
-          <>
-            <p>Thank you for your request, we will reply soon.</p>{" "}
-            <button className="button button--outline" onClick={reset}>
-              Send another request
-            </button>
-          </>
-        ) : (
-          <>
-            {error && <p className="error">Ha ocurrido un error.</p>}
-            <button
-              type="submit"
-              className="button button--solid"
-              disabled={state.submitting}
-            >
-              {state.submitting ? "Sending" : "Send"}
-            </button>
-          </>
-        )}
+        <div className="sendButtonContainer">
+          {state.succeeded ? (
+            <>
+              <p>Thank you for your request, we will reply soon.</p>{" "}
+              <button className="button button--outline" onClick={reset}>
+                Send another request
+              </button>
+            </>
+          ) : (
+            <>
+              {error && <p className="error">Ha ocurrido un error.</p>}
+              <button
+                type="submit"
+                className="button button--solid"
+                disabled={state.submitting}
+              >
+                {state.submitting ? "Sending" : "Send"}
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </form>
   );

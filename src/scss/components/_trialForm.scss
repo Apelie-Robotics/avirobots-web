@@ -70,4 +70,33 @@
       color: rgb(244, 64, 64);
     }
   }
+
+  @include pc() {
+    .inputsContainer {
+      @include dflex(space-between, row, end);
+      flex-wrap: wrap;
+
+      .input,
+      .dateTimeInputs {
+        width: 30%;
+
+        .date,
+        .time {
+          width: 45%;
+        }
+      }
+
+      .message {
+        width: 60%;
+      }
+
+      .sendButtonContainer {
+        width: 30%;
+        .button {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
 }
