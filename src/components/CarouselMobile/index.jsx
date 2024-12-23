@@ -1,63 +1,60 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
-const CarouselMobile = ({ images }) => {
-  const [startX, setStartX] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const CarouselMobile = ({ children }) => {
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const handleTouchStart = (e) => {
-    setStartX(e.touches[0].clientX);
+  const checkScrollPosition = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft + clientWidth + 15 < scrollWidth);
   };
 
-  const handleTouchMove = (e) => {
-    if (!startX) return;
-    const currentX = e.touches[0].clientX;
-    const difference = startX - currentX;
+  const scroll = (direction) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
 
-    if (Math.abs(difference) > 50) {
-      if (difference > 0) {
-        // Swipe left
-        if (currentImageIndex < images.length - 1) {
-          setCurrentImageIndex(currentImageIndex + 1);
-        }
-      } else {
-        // Swipe right
-        if (currentImageIndex > 0) {
-          setCurrentImageIndex(currentImageIndex - 1);
-        }
-      }
-      setStartX(null);
-    }
-  };
+    const scrollAmount = window.innerWidth;
+    const newScrollPosition =
+      direction === "left"
+        ? container.scrollLeft - scrollAmount
+        : container.scrollLeft + scrollAmount;
 
-  const classSelector = (index) => {
-    if (index === currentImageIndex) return "active";
-    if (index === currentImageIndex - 1) return "inactiveLeft";
-    if (index === currentImageIndex + 1) return "inactiveRight";
-    if (index === currentImageIndex - 2) return "secondInactiveLeft";
-    if (index === currentImageIndex + 2) return "secondInactiveRight";
-    return "inactive";
+    container.scrollTo({
+      left: newScrollPosition,
+      behavior: "smooth",
+    });
   };
 
   return (
-    <div
-      className="carouselContainerMobile"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={() => setStartX(null)}
-    >
-      <div className="carouselWrapper">
-        {images.map((image, index) => (
-          <img
-            src={image}
-            alt={`carousel-img-${index}`}
-            key={index}
-            className={`${classSelector(index)}`}
-            onClick={() => setCurrentImageIndex(index)}
-          />
-        ))}
+    <div className="carouselContainer">
+      <button
+        onClick={() => scroll("left")}
+        className={!canScrollLeft ? "disabled" : ""}
+      >
+        <FaChevronLeft />
+      </button>
+      <div
+        className="carouselMobile"
+        ref={scrollContainerRef}
+        onScroll={checkScrollPosition}
+      >
+        {children}
       </div>
+      <button
+        onClick={() => scroll("right")}
+        className={!canScrollRight ? "disabled" : ""}
+      >
+        <FaChevronRight />
+      </button>
     </div>
   );
 };

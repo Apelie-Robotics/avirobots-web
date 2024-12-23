@@ -1,106 +1,67 @@
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useForm } from "@formspree/react";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
-  const [loading, setLoading] = useState(false);
+  const [state, handleSubmit, reset] = useForm(
+    import.meta.env.VITE_CONTACT_FORM_ID
+  );
+  const [error, setError] = useState(false);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [country, setCountry] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const params = {
-      to_name: "Apelie",
-      from_name: name,
-      reply_to: email,
-      phone: phone,
-      country: country,
-      message: message,
-    };
-
-    emailjs
-      .send("service_2g0x54a", "template_wxlht9t", params, "TIAfrFq1fUxg4P1TZ")
-      .then(
-        (res) => {
-          alert("Success!", res.status, res.text);
-          setLoading(false);
-          setName("");
-          setEmail("");
-          setPhone("");
-          setCountry("");
-          setMessage("");
-        },
-        (error) => {
-          alert("Error: ", error);
-          setLoading(false);
-        }
-      );
-  };
+  useEffect(() => {
+    if (state.errors) setError(true);
+    if (!error && state.succeeded) setError(false);
+  }, [state, error]);
 
   return (
     <div className="contactPage">
+      <div className="bgMask" />
       <div className="contactFormContainer">
-        <h1>Contact Us!</h1>
-        <span>Let's get in touch!</span>
+        <div className="titles">
+          <h1>Contact Us!</h1>
+          <p>Let's get in touch!</p>
+        </div>
         <form className="contactForm" onSubmit={handleSubmit}>
-          <div className="inputContainer name">
-            <label htmlFor="name">Nombre / Name*</label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
+          <div className="inputContainer">
+            <label htmlFor="name">Name*</label>
+            <input type="text" id="name" name="name" required />
           </div>
-          <div className="inputContainer email">
+          <div className="inputContainer">
             <label htmlFor="email">E-mail*</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            <input type="email" id="email" name="email" required />
           </div>
-          <div className="inputContainer phone">
-            <label htmlFor="phone">Celular / Phone number</label>
-            <input
-              type="text"
-              id="phone"
-              value={phone}
-              onChange={(e) =>
-                !isNaN(e.target.value) && setPhone(e.target.value)
-              }
-            />
+          <div className="inputContainer">
+            <label htmlFor="phone">Phone number</label>
+            <input type="text" id="phone" name="phone" />
           </div>
-          <div className="inputContainer country">
-            <label htmlFor="country">País / Country*</label>
-            <input
-              type="text"
-              id="country"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              required
-            />
+          <div className="inputContainer">
+            <label htmlFor="country">Country*</label>
+            <input type="text" id="country" name="country" required />
           </div>
           <div className="inputContainer message">
-            <label htmlFor="message">Mensaje / Message*</label>
-            <textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
+            <label htmlFor="message">Message*</label>
+            <textarea id="message" name="message" rows={5}></textarea>
           </div>
-          <input
-            type="submit"
-            value={loading ? "Sending, please wait" : "Send"}
-            className="button button--solid"
-          />
+          <div className="sendButtonContainer">
+            {state.succeeded ? (
+              <>
+                <p>Thank you for your request, we will reply soon.</p>{" "}
+                <button className="button button--outline" onClick={reset}>
+                  Send another request
+                </button>
+              </>
+            ) : (
+              <>
+                {error && <p className="error">Ha ocurrido un error.</p>}
+                <button
+                  type="submit"
+                  className="button button--solid"
+                  disabled={state.submitting}
+                >
+                  {state.submitting ? "Sending" : "Send"}
+                </button>
+              </>
+            )}
+          </div>
         </form>
       </div>
     </div>

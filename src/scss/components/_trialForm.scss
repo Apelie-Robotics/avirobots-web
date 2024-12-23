@@ -1,0 +1,102 @@
+.trialForm {
+  background-color: map-get($colors, "light");
+  border-radius: 20px;
+  padding: 15px 30px;
+
+  .titles {
+    margin-bottom: 15px;
+
+    p {
+      font-size: 0.8rem;
+      color: map-get($colors, "dark2");
+    }
+  }
+
+  .inputsContainer {
+    margin-bottom: 30px;
+    & > *:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    .input {
+      @include dflex(space-between, column, start);
+      gap: 5px;
+      label {
+        font-size: 0.6rem;
+        color: map-get($colors, "dark2");
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        border: none;
+        background-color: #d9d9d9;
+        color: map-get($colors, "dark2");
+        padding: 5px;
+        outline: none;
+      }
+      textarea {
+        resize: none;
+      }
+    }
+
+    .dateTimeInputs {
+      @include dflex(space-between, row);
+      input {
+        text-align: center;
+      }
+    }
+  }
+
+  .button {
+    min-width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sendButtonContainer {
+    p {
+      font-size: 0.8rem;
+      color: map-get($colors, "dark2");
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .button--outline {
+      color: map-get($colors, "primary");
+    }
+    .error {
+      font-size: 0.8rem;
+      color: rgb(244, 64, 64);
+    }
+  }
+
+  @include pc() {
+    .inputsContainer {
+      @include dflex(space-between, row, end);
+      flex-wrap: wrap;
+
+      .input,
+      .dateTimeInputs {
+        width: 30%;
+
+        .date,
+        .time {
+          width: 45%;
+        }
+      }
+
+      .message {
+        width: 60%;
+      }
+
+      .sendButtonContainer {
+        width: 30%;
+        .button {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
