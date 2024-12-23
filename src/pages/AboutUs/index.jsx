@@ -9,6 +9,8 @@ import {
   staff4Pc,
   staff5,
   staff5Pc,
+  staff6,
+  staff6Pc,
   supporter1,
   supporter1Pc,
   supporter2,
@@ -85,7 +87,9 @@ const AboutUs = () => {
               <source srcSet={staff5Pc} media="(min-width: 1024px)" />
               <img src={staff5} alt="Eng. Mateo Giovagnoli" loading="eager" />
             </picture>
-            <h3>Eng. Mateo Giovagnoli</h3>
+            <h3>
+              Eng. Mateo <b>Giovagnoli</b>
+            </h3>
             <div>
               <p className="position">CTO</p>
               <p className="hq">Arg Hq</p>
@@ -93,12 +97,16 @@ const AboutUs = () => {
           </article>
           <article>
             <picture>
-              {/* <source srcSet={staff1Pc} media="(min-width: 1024px)" /> */}
-              <img src="" alt="Staff member" loading="eager" />
+              <source srcSet={staff6Pc} media="(min-width: 1024px)" />
+              <img src={staff6} alt="Vet. Leonardo Bussi" loading="eager" />
             </picture>
-            <h3></h3>
-            <p className="position"></p>
-            <p className="hq"></p>
+            <h3>
+              Vet. Leonardo <b>Bussi</b>
+            </h3>
+            <div>
+              <p className="position">Advisor</p>
+              <p className="hq">Arg Hq</p>
+            </div>
           </article>
         </div>
         <div className="text">

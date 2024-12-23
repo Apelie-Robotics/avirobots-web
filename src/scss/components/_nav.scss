@@ -3,11 +3,15 @@
   @include pc {
     @include dflex(space-between, row);
   }
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: map-get($colors, "light");
 
-  padding: 25px 15%;
+  padding: 15px 15%;
 
   img {
-    width: 25%;
+    width: 20%;
   }
 
   .linkContainer {
@@ -17,7 +21,8 @@
       white-space: nowrap;
       text-decoration: none;
       color: inherit;
-      font-weight: 700;
+      font-weight: 600;
+      font-size: 1rem;
     }
     .trialLink {
       color: map-get($colors, "primary");
@@ -44,10 +49,12 @@
     img {
       width: 100%;
     }
-    span {
-      font-size: 0.6rem;
-      color: map-get($colors, "dark");
+    @include tablet {
+      width: 15%;
     }
+  }
+  @include tablet {
+    padding: 2.5%;
   }
 
   .mobileMenu {

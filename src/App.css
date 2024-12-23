@@ -26,7 +26,11 @@
 
 .navPc {
   display: none;
-  padding: 25px 15%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  padding: 15px 15%;
 }
 @media (min-width: 1024px) {
   .navPc {
@@ -37,7 +41,7 @@
   }
 }
 .navPc img {
-  width: 25%;
+  width: 20%;
 }
 .navPc .linkContainer {
   display: flex;
@@ -50,7 +54,8 @@
   white-space: nowrap;
   text-decoration: none;
   color: inherit;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1rem;
 }
 .navPc .linkContainer .trialLink {
   color: #f7941e;
@@ -84,9 +89,15 @@
 .mobileNav .mobileNav__Logo img {
   width: 100%;
 }
-.mobileNav .mobileNav__Logo span {
-  font-size: 0.6rem;
-  color: black;
+@media (min-width: 768px) {
+  .mobileNav .mobileNav__Logo {
+    width: 15%;
+  }
+}
+@media (min-width: 768px) {
+  .mobileNav {
+    padding: 2.5%;
+  }
 }
 .mobileNav .mobileMenu {
   position: fixed;
@@ -441,7 +452,7 @@ footer .secondaryContainer {
   .home .section1 {
     height: 90vh;
     padding: 0 15vw;
-    padding-right: 50%;
+    padding-right: 45%;
     margin: 0;
     border-radius: 0;
     background-image: url("/assets/picture/heroPc.jpg");
@@ -450,7 +461,7 @@ footer .secondaryContainer {
     gap: 10%;
   }
   .home .section1 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .home .section1 p {
     margin-top: 15px;
@@ -542,7 +553,7 @@ footer .secondaryContainer {
   transform: translateY(-50%);
 }
 .home .section2Container .section2Pc .textContainer {
-  width: 30vw;
+  width: 25vw;
   z-index: 2;
   border-left: solid 2px #f7941e;
   padding-left: 15px;
@@ -745,11 +756,12 @@ footer .secondaryContainer {
   color: white;
   position: relative;
 }
-.home .section6 iframe {
+.home .section6 video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  background-color: black;
 }
 .home .section6 .text {
   position: relative;
@@ -782,17 +794,6 @@ footer .secondaryContainer {
   .home .section6::before {
     background: linear-gradient(90deg, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
   }
-  .home .section6::after {
-    content: " ";
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    height: 100%;
-    width: 30%;
-    background: linear-gradient(270deg, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
-  }
   .home .section6 .text {
     inset: 0;
     position: relative;
@@ -800,15 +801,17 @@ footer .secondaryContainer {
     width: 50%;
     padding-left: 10vw;
   }
-  .home .section6 iframe {
+  .home .section6 video {
     position: absolute;
     z-index: 1;
     inset: 0;
-    width: 80%;
+    left: 10%;
+    width: 90%;
     height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
   }
+}
+.home .isPlaying .text, .home .isPlaying::before {
+  visibility: hidden;
 }
 .home .section7 {
   padding: 0 30px;
@@ -831,13 +834,21 @@ footer .secondaryContainer {
   justify-content: space-between;
   gap: 15px;
   margin-top: 30px;
-  margin-left: 15px;
 }
 .home .section7 .articleContainer img {
   width: 50%;
   transform: rotate(5deg);
   position: relative;
   left: 40%;
+}
+@media (min-width: 768px) {
+  .home .section7 .articleContainer {
+    align-items: center;
+  }
+  .home .section7 .articleContainer img {
+    width: 25%;
+    left: 0;
+  }
 }
 .home .section7 .articleContainer .button {
   text-align: center;
@@ -984,6 +995,7 @@ footer .secondaryContainer {
   .aboutUs h1 {
     font-size: 2.2rem;
     text-align: start;
+    padding: 0 15px;
   }
   .aboutUs .contentContainer {
     display: flex;
@@ -993,14 +1005,26 @@ footer .secondaryContainer {
     padding: 0;
   }
   .aboutUs .contentContainer .text {
-    text-align: start;
+    text-align: justify;
     margin-bottom: 10vh;
+    padding: 0 15px;
   }
   .aboutUs .contentContainer .pictures {
-    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0;
+    row-gap: 25px;
   }
   .aboutUs .contentContainer .pictures article {
-    width: fit-content;
+    width: 25%;
+    padding: 15px;
+  }
+  .aboutUs .contentContainer .pictures article picture {
+    width: 100%;
+  }
+  .aboutUs .contentContainer .pictures article picture img {
+    width: 100%;
   }
   .aboutUs .supportersContainer {
     margin-top: 25px;

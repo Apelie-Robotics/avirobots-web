@@ -75,21 +75,36 @@
     h1 {
       font-size: 2.2rem;
       text-align: start;
+      padding: 0 15px;
     }
 
     .contentContainer {
-      @include dflex(space-between, column-reverse);
+      @include dflex(space-between, column-reverse, center);
       padding: 0;
 
       .text {
-        text-align: start;
+        text-align: justify;
         margin-bottom: 10vh;
+        padding: 0 15px;
       }
 
       .pictures {
-        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 0;
+        row-gap: 25px;
+
         article {
-          width: fit-content;
+          width: 25%;
+          padding: 15px;
+
+          picture {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
         }
       }
     }

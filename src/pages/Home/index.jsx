@@ -4,7 +4,6 @@ import {
   illustration1,
   illustration2,
   illustration3,
-  locationIcon,
   validationMobile,
   illustration4,
   app,
@@ -13,10 +12,14 @@ import {
   validationPc,
   boots,
 } from "../../assets";
+import robotVideo from "/assets/video/robotVideo.mp4";
 import TrialForm from "../../components/TrialForm";
 import CarouselMobile from "../../components/CarouselMobile";
+import { useState } from "react";
 
 const Home = () => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
   return (
     <main className="home">
       <h1 className="sr-only">Home</h1>
@@ -130,14 +133,6 @@ const Home = () => {
               his eyes.
             </p>
           </div>
-          <div className="location">
-            <img
-              src={locationIcon}
-              alt="Location icon"
-              className="locationIcon"
-            />
-            <span>Mildmay, Canada.</span>
-          </div>
         </div>
       </section>
 
@@ -145,19 +140,19 @@ const Home = () => {
         <h2>Benefits of our Flocker Robot</h2>
         <div className="benefitsContainer">
           <article>
+            <img
+              src={illustration3}
+              alt="Traceability and quality illustration"
+            />
+            <p>Tackle Labour Shortage</p>
+          </article>
+          <article>
             <img src={illustration1} alt="Production illustration" />
             <p>Biosecurity</p>
           </article>
           <article>
             <img src={illustration2} alt="Precision illustration" />
             <p>Precision Livestock farming</p>
-          </article>
-          <article>
-            <img
-              src={illustration3}
-              alt="Traceability and quality illustration"
-            />
-            <p>Tackle Labour Shortage</p>
           </article>
           <article>
             <img src={illustration4} alt="Animal welfare illustration" />
@@ -193,7 +188,10 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="section6" id="video">
+      <section
+        id="video"
+        className={`section6 ${isVideoPlaying ? "isPlaying" : ""}`}
+      >
         <div className="text">
           <h2>
             An intelligent robot to get rid of <i>tedious</i> or{" "}
@@ -203,15 +201,11 @@ const Home = () => {
             We apply <b>robotics and AI</b> to enhance the poultry industry.
           </p>
         </div>
-        <iframe
-          loading="lazy"
-          src="https://www.youtube.com/embed/NZfC_F_0eN0?si=RiwaorZFgFpdbigv"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <video
+          src={robotVideo}
+          controls
+          onPlay={() => setIsVideoPlaying(true)}
+        />
       </section>
 
       <div className="section7">

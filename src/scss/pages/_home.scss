@@ -38,7 +38,7 @@
     @include pc() {
       height: 90vh;
       padding: 0 15vw;
-      padding-right: 50%;
+      padding-right: 45%;
       margin: 0;
       border-radius: 0;
       background-image: url("/assets/picture/heroPc.jpg");
@@ -47,7 +47,7 @@
       gap: 10%;
 
       h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       p {
@@ -149,7 +149,7 @@
       }
 
       .textContainer {
-        width: 30vw;
+        width: 25vw;
         z-index: 2;
         border-left: solid 2px map-get($colors, "primary");
         padding-left: 15px;
@@ -375,11 +375,12 @@
     color: map-get($colors, "light");
     position: relative;
 
-    iframe {
+    video {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
+      background-color: map-get($colors, "dark");
     }
 
     .text {
@@ -423,22 +424,6 @@
         );
       }
 
-      &::after {
-        content: " ";
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        height: 100%;
-        width: 30%;
-        background: linear-gradient(
-          270deg,
-          rgba(0, 0, 0, 1) 50%,
-          rgba(0, 0, 0, 0) 100%
-        );
-      }
-
       .text {
         inset: 0;
         position: relative;
@@ -447,15 +432,20 @@
         padding-left: 10vw;
       }
 
-      iframe {
+      video {
         position: absolute;
         z-index: 1;
         inset: 0;
-        width: 80%;
+        left: 10%;
+        width: 90%;
         height: 100%;
-        left: 50%;
-        transform: translateX(-50%);
       }
+    }
+  }
+  .isPlaying {
+    .text,
+    &::before {
+      visibility: hidden;
     }
   }
 
@@ -485,12 +475,19 @@
       @include dflex(space-between, column, start);
       gap: 15px;
       margin-top: 30px;
-      margin-left: 15px;
+
       img {
         width: 50%;
         transform: rotate(5deg);
         position: relative;
         left: 40%;
+      }
+      @include tablet {
+        align-items: center;
+        img {
+          width: 25%;
+          left: 0;
+        }
       }
       .button {
         text-align: center;
