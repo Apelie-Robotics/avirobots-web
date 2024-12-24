@@ -203,7 +203,10 @@ const Home = () => {
         </div>
         <video
           src={robotVideo}
-          controls
+          controls={false}
+          autoPlay
+          muted
+          playsInline
           onPlay={() => setIsVideoPlaying(true)}
         />
       </section>
