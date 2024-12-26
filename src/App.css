@@ -626,7 +626,7 @@ footer .secondaryContainer {
 }
 @media (min-width: 1024px) {
   .home .section3 {
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: center;
@@ -755,7 +755,6 @@ footer .secondaryContainer {
   height: 50vh;
   color: white;
   position: relative;
-  display: none;
 }
 .home .section6 video {
   position: absolute;
