@@ -756,7 +756,8 @@ footer .secondaryContainer {
   color: white;
   position: relative;
 }
-.home .section6 video {
+.home .section6 video,
+.home .section6 iframe {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -801,7 +802,8 @@ footer .secondaryContainer {
     width: 50%;
     padding-left: 10vw;
   }
-  .home .section6 video {
+  .home .section6 video,
+  .home .section6 iframe {
     position: absolute;
     z-index: 1;
     inset: 0;
