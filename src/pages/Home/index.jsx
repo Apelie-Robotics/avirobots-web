@@ -188,53 +188,29 @@ const Home = () => {
         </div>
       </div>
 
-      <section
-        id="video"
-        className={`section6 ${isVideoPlaying ? "isPlaying" : ""}`}
-      >
+      <section id="video" className={`section6 ${isVideoPlaying && "isPlaying"}`}>
         <div className="text">
-          <h2>
-            An intelligent robot to get rid of <i>tedious</i> or{" "}
-            <i>repetitive</i> tasks.
-          </h2>
-          <p>
-            We apply <b>robotics and AI</b> to enhance the poultry industry.
-          </p>
+          <h2>An intelligent robot to get rid of <i>tedious</i> or{" "} <i>repetitive</i> tasks.</h2>
+          <p>We apply <b>robotics and AI</b> to enhance the poultry industry.</p>
         </div>
-        <video
-          src={robotVideo}
-          controls
-          onPlay={() => setIsVideoPlaying(true)}
-        />
+        <video src={robotVideo} controls={false} autoPlay muted playsInline onPlay={() => setIsVideoPlaying(true)} />
       </section>
 
       <div className="section7">
         <h2>
-          Our colaboration with{" "}
-          <a href="https://www.linkedin.com/company/conicet/" target="_blank">
-            CONICET
-          </a>
-          , published in the Poultry Science Magazine, an official journal of
-          the{" "}
-          <a
-            href="https://www.linkedin.com/company/poultry-science-association/"
-            target="_blank"
-          >
-            Poultry Science Association
-          </a>
-          .
+          Our colaboration with{' '}<a href="https://www.linkedin.com/company/conicet/" target="_blank">CONICET</a>,
+          published in the Poultry Science Magazine, an official journal of the{' '}
+          <a href="https://www.linkedin.com/company/poultry-science-association/" target="_blank">Poultry Science Association</a>.
         </h2>
         <div className="content">
           <img src={boots} alt="Boots" className="boots pc" loading="lazy" />
           <div className="middleContainer">
             <div className="text">
               <p>
-                This paper serves as an important{" "}
-                <b>milestone in recognizing the capabilities of our robot</b>,
-                AviSense, within the poultry environment. It opens up a universe
-                of potential studies, from exploring further benefits such as
-                improved feed conversion and meat quality to potentially
-                reducing mortality.
+                This paper serves as an important <b>milestone in recognizing the capabilities of our robot</b>,
+                AviSense, within the poultry environment.
+                It opens up a universe of potential studies,
+                from exploring further benefits such as improved feed conversion and meat quality to potentially reducing mortality.
               </p>
               <p>
                 Our first product is AviSense, an electric robot that{" "}
