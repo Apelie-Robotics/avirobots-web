@@ -115,8 +115,8 @@ const Home = () => {
 
       <section className="section3">
         <iframe
-          // loading="lazy"
-          src="https://www.youtube.com/embed/tuXtUnuKQIg?playlist=tuXtUnuKQIg&loop=1&autoplay=1&mute=1&playsinline=1&rel=0"
+          loading="lazy"
+          src="https://www.youtube.com/embed/B-5xVNwh6a0?enablejsapi=1&playlist=B-5xVNwh6a0&loop=1&autoplay=1&mute=1&playsinline=1&controls=0&rel=0"
           title="YouTube video player"
           frameborder="0"
           allow="autoplay; encrypted-media"
@@ -189,7 +189,7 @@ const Home = () => {
         {/* <video src={robotVideo} controls={false} autoPlay muted playsInline onPlay={() => setIsVideoPlaying(true)} /> */}
         <iframe
           loading="lazy"
-          src="https://www.youtube.com/embed/tuXtUnuKQIg?playlist=tuXtUnuKQIg&loop=1&autoplay=1&mute=1&playsinline=1&controls=0&rel=0"
+          src="https://www.youtube.com/embed/tuXtUnuKQIg?enablejsapi=1&playlist=tuXtUnuKQIg&loop=1&autoplay=1&mute=1&playsinline=1&controls=0&rel=0"
           frameborder="0"
           allow="autoplay; encrypted-media"
         ></iframe>

@@ -1,16 +1,16 @@
 import {
   staff1,
-  staff1Pc,
+  staff1pc,
   staff2,
-  staff2Pc,
+  staff2pc,
   staff3,
-  staff3Pc,
+  staff3pc,
   staff4,
-  staff4Pc,
+  staff4pc,
   staff5,
-  staff5Pc,
+  staff5pc,
   staff6,
-  staff6Pc,
+  staff6pc,
   supporter1,
   supporter1Pc,
   supporter2,
@@ -32,12 +32,10 @@ const AboutUs = () => {
         <div className="pictures">
           <article>
             <picture>
-              <source srcSet={staff1Pc} media="(min-width: 1024px)" />
+              <source srcSet={staff1pc} media="(min-width: 1024px)" />
               <img src={staff1} alt="Arch. Lucas Jagodnik" loading="eager" />
             </picture>
-            <h3>
-              Arch. Lucas <b>Jagodnik</b>
-            </h3>
+            <h3>Arch. Lucas <b>Jagodnik</b></h3>
             <div>
               <p className="position">CEO</p>
               <p className="hq">USA Hq</p>
@@ -45,12 +43,10 @@ const AboutUs = () => {
           </article>
           <article>
             <picture>
-              <source srcSet={staff2Pc} media="(min-width: 1024px)" />
+              <source srcSet={staff2pc} media="(min-width: 1024px)" />
               <img src={staff2} alt="Des. Tadeo Cernusco" loading="eager" />
             </picture>
-            <h3>
-              Des. Tadeo <b>Cernusco</b>
-            </h3>
+            <h3>Des. Tadeo <b>Cernusco</b></h3>
             <div>
               <p className="position">COS</p>
               <p className="hq">USA Hq</p>
@@ -58,12 +54,10 @@ const AboutUs = () => {
           </article>
           <article>
             <picture>
-              <source srcSet={staff3Pc} media="(min-width: 1024px)" />
+              <source srcSet={staff3pc} media="(min-width: 1024px)" />
               <img src={staff3} alt="Eng. Facundo Garzón" loading="eager" />
             </picture>
-            <h3>
-              Eng. Facundo <b>Garzón</b>
-            </h3>
+            <h3>Eng. Facundo <b>Garzón</b></h3>
             <div>
               <p className="position">COO</p>
               <p className="hq">Arg Hq</p>
@@ -71,12 +65,10 @@ const AboutUs = () => {
           </article>
           <article>
             <picture>
-              <source srcSet={staff4Pc} media="(min-width: 1024px)" />
+              <source srcSet={staff4pc} media="(min-width: 1024px)" />
               <img src={staff4} alt="Des. Sol Rosenwald" loading="eager" />
             </picture>
-            <h3>
-              Des. Sol <b>Rosenwald</b>
-            </h3>
+            <h3>Des. Sol <b>Rosenwald</b></h3>
             <div>
               <p className="position">PM</p>
               <p className="hq">Arg Hq</p>
@@ -84,12 +76,10 @@ const AboutUs = () => {
           </article>
           <article>
             <picture>
-              <source srcSet={staff5Pc} media="(min-width: 1024px)" />
+              <source srcSet={staff5pc} media="(min-width: 1024px)" />
               <img src={staff5} alt="Eng. Mateo Giovagnoli" loading="eager" />
             </picture>
-            <h3>
-              Eng. Mateo <b>Giovagnoli</b>
-            </h3>
+            <h3>Eng. Mateo <b>Giovagnoli</b></h3>
             <div>
               <p className="position">CTO</p>
               <p className="hq">Arg Hq</p>
@@ -97,12 +87,10 @@ const AboutUs = () => {
           </article>
           <article>
             <picture>
-              <source srcSet={staff6Pc} media="(min-width: 1024px)" />
+              <source srcSet={staff6pc} media="(min-width: 1024px)" />
               <img src={staff6} alt="Vet. Leonardo Bussi" loading="eager" />
             </picture>
-            <h3>
-              Vet. Leonardo <b>Bussi</b>
-            </h3>
+            <h3>Vet. Leonardo <b>Bussi</b></h3>
             <div>
               <p className="position">Advisor</p>
               <p className="hq">Arg Hq</p>

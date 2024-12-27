@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { apelieIsologo, aviRobotsLogo } from "../../assets";
+import { apelieIsoLogo, aviRobotsLogo } from "../../assets";
 
 const MobileNavBar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -60,7 +60,7 @@ const MobileNavBar = () => {
             Johns Creek, Georgia USA
           </span>
           <img
-            src={apelieIsologo}
+            src={apelieIsoLogo}
             alt="Logo"
             className="mobileMenu__BottomLogo"
           ></img>
