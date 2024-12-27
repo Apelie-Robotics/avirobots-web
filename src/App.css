@@ -626,7 +626,7 @@ footer .secondaryContainer {
 }
 @media (min-width: 1024px) {
   .home .section3 {
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: center;
@@ -755,9 +755,9 @@ footer .secondaryContainer {
   height: 50vh;
   color: white;
   position: relative;
-  display: none;
 }
-.home .section6 video {
+.home .section6 video,
+.home .section6 iframe {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -802,7 +802,8 @@ footer .secondaryContainer {
     width: 50%;
     padding-left: 10vw;
   }
-  .home .section6 video {
+  .home .section6 video,
+  .home .section6 iframe {
     position: absolute;
     z-index: 1;
     inset: 0;
