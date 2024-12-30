@@ -11,8 +11,8 @@ import {
   robotAndApp,
   validationPc,
   boots,
+  videoFlockerPov
 } from "../../assets";
-import robotVideo from "/assets/video/robotVideo.mp4";
 import TrialForm from "../../components/TrialForm";
 import CarouselMobile from "../../components/CarouselMobile";
 import { useState } from "react";
@@ -114,13 +114,16 @@ const Home = () => {
       </section>
 
       <section className="section3">
-        <iframe
-          loading="lazy"
-          src="https://www.youtube.com/embed/B-5xVNwh6a0?enablejsapi=1&playlist=B-5xVNwh6a0&loop=1&autoplay=1&mute=1&playsinline=1&controls=0&rel=0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-        ></iframe>
+        <video src={videoFlockerPov}
+          width="1280"
+          height="720"
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          controls={false}
+          onContextMenu={(e) => { e.preventDefault(); return false; }}
+        ></video>
         <div className="contentContainer">
           <div className="titles">
             <h2>The Robot's Eyes <b>in Real-Time</b></h2>
