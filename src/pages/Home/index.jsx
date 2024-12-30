@@ -17,6 +17,7 @@ import TrialForm from "../../components/TrialForm";
 import CarouselMobile from "../../components/CarouselMobile";
 import { useState } from "react";
 
+
 const Home = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
@@ -115,8 +116,8 @@ const Home = () => {
 
       <section className="section3">
         <video src={videoFlockerPov}
-          width="1280"
-          height="720"
+          width="1024"
+          height="576"
           autoPlay={true}
           muted={true}
           loop={true}
@@ -184,15 +185,14 @@ const Home = () => {
         </div>
       </div>
 
-      <section id="video" className={`section6 ${isVideoPlaying && "isPlaying"}`}>
+      <section id="video" className={`section6 isPlaying`/*${isVideoPlaying && "isPlaying"}*/}>
         <div className="text">
           <h2>An intelligent robot to get rid of <i>tedious</i> or{" "} <i>repetitive</i> tasks.</h2>
           <p>We apply <b>robotics and AI</b> to enhance the poultry industry.</p>
         </div>
-        {/* <video src={robotVideo} controls={false} autoPlay muted playsInline onPlay={() => setIsVideoPlaying(true)} /> */}
         <iframe
           loading="lazy"
-          src="https://www.youtube.com/embed/tuXtUnuKQIg?enablejsapi=1&playlist=tuXtUnuKQIg&loop=1&autoplay=1&mute=1&playsinline=1&controls=0&rel=0"
+          src="https://www.youtube.com/embed/tuXtUnuKQIg?enablejsapi=1&playlist=tuXtUnuKQIg&loop=1&autoplay=1&mute=1&playsinline=1&rel=0"
           frameborder="0"
           allow="autoplay; encrypted-media"
         ></iframe>
