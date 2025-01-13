@@ -11,11 +11,12 @@ import {
   robotAndApp,
   validationPc,
   boots,
+  videoFlockerPov
 } from "../../assets";
-import robotVideo from "/assets/video/robotVideo.mp4";
 import TrialForm from "../../components/TrialForm";
 import CarouselMobile from "../../components/CarouselMobile";
 import { useState } from "react";
+
 
 const Home = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -114,24 +115,20 @@ const Home = () => {
       </section>
 
       <section className="section3">
-        <iframe
-          loading="lazy"
-          src="https://www.youtube.com/embed/NZfC_F_0eN0?si=RiwaorZFgFpdbigv"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <video src={videoFlockerPov}
+          width="1024"
+          height="576"
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          controls={false}
+          onContextMenu={(e) => { e.preventDefault(); return false; }}
+        ></video>
         <div className="contentContainer">
           <div className="titles">
-            <h2>
-              The Robot's Eyes <b>in Real-Time</b>
-            </h2>
-            <p>
-              The Flocker Robot is operating NOW, click below and see through
-              his eyes.
-            </p>
+            <h2>The Robot's Eyes <b>in Real-Time</b></h2>
+            <p>The Flocker Robot is operating NOW, click below and see through his eyes.</p>
           </div>
         </div>
       </section>
@@ -188,12 +185,17 @@ const Home = () => {
         </div>
       </div>
 
-      <section id="video" className={`section6 ${isVideoPlaying && "isPlaying"}`}>
+      <section id="video" className={`section6 isPlaying`/*${isVideoPlaying && "isPlaying"}*/}>
         <div className="text">
           <h2>An intelligent robot to get rid of <i>tedious</i> or{" "} <i>repetitive</i> tasks.</h2>
           <p>We apply <b>robotics and AI</b> to enhance the poultry industry.</p>
         </div>
-        <video src={robotVideo} controls={false} autoPlay muted playsInline onPlay={() => setIsVideoPlaying(true)} />
+        <iframe
+          loading="lazy"
+          src="https://www.youtube.com/embed/tuXtUnuKQIg?enablejsapi=1&playlist=tuXtUnuKQIg&loop=1&autoplay=1&mute=1&playsinline=1&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+        ></iframe>
       </section>
 
       <div className="section7">
