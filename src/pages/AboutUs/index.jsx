@@ -1,8 +1,6 @@
 import {
   staff1,
   staff1pc,
-  staff2,
-  staff2pc,
   staff3,
   staff3pc,
   staff4,
@@ -38,17 +36,6 @@ const AboutUs = () => {
             <h3>Arch. Lucas <b>Jagodnik</b></h3>
             <div>
               <p className="position">CEO</p>
-              <p className="hq">USA Hq</p>
-            </div>
-          </article>
-          <article>
-            <picture>
-              <source srcSet={staff2pc} media="(min-width: 1024px)" />
-              <img src={staff2} alt="Des. Tadeo Cernusco" loading="eager" />
-            </picture>
-            <h3>Des. Tadeo <b>Cernusco</b></h3>
-            <div>
-              <p className="position">COS</p>
               <p className="hq">USA Hq</p>
             </div>
           </article>

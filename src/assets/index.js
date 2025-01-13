@@ -39,13 +39,11 @@ const awsRoute = "https://s3.sa-east-1.amazonaws.com/avirobots.com/media/";
 
 // About us
 export const staff1 = awsRoute + "staff/1.jpg";
-export const staff2 = awsRoute + "staff/2.jpg";
 export const staff3 = awsRoute + "staff/3.jpg";
 export const staff4 = awsRoute + "staff/4.jpg";
 export const staff5 = awsRoute + "staff/5.jpg";
 export const staff6 = awsRoute + "staff/6.jpg";
 export const staff1pc = awsRoute + "staff/1pc.jpg";
-export const staff2pc = awsRoute + "staff/2pc.jpg";
 export const staff3pc = awsRoute + "staff/3pc.jpg";
 export const staff4pc = awsRoute + "staff/4pc.jpg";
 export const staff5pc = awsRoute + "staff/5pc.jpg";
