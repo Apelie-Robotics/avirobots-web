@@ -45,19 +45,6 @@ const AboutUs = () => {
           </article>
           <article>
             <picture>
-              <source srcSet={staff2Pc} media="(min-width: 1024px)" />
-              <img src={staff2} alt="Des. Tadeo Cernusco" loading="eager" />
-            </picture>
-            <h3>
-              Des. Tadeo <b>Cernusco</b>
-            </h3>
-            <div>
-              <p className="position">COS</p>
-              <p className="hq">USA Hq</p>
-            </div>
-          </article>
-          <article>
-            <picture>
               <source srcSet={staff3Pc} media="(min-width: 1024px)" />
               <img src={staff3} alt="Eng. Facundo Garzón" loading="eager" />
             </picture>
