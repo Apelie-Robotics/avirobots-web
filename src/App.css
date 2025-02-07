@@ -31,6 +31,7 @@
   z-index: 50;
   background-color: white;
   padding: 15px 15%;
+  padding-right: 20%;
 }
 @media (min-width: 1024px) {
   .navPc {
@@ -40,8 +41,11 @@
     justify-content: space-between;
   }
 }
-.navPc img {
-  width: 20%;
+.navPc .logo {
+  width: 10%;
+}
+.navPc .logo img {
+  width: 100%;
 }
 .navPc .linkContainer {
   display: flex;
@@ -60,6 +64,14 @@
 .navPc .linkContainer .trialLink {
   color: #f7941e;
   font-style: italic;
+}
+.navPc .getTshirt {
+  position: absolute;
+  left: calc(100% - 10vw);
+  top: 35%;
+}
+.navPc .getTshirt img {
+  width: 10vw;
 }
 
 .mobileNav {
@@ -395,7 +407,7 @@ footer .secondaryContainer {
     width: 45%;
   }
   .trialForm .inputsContainer .message {
-    width: 60%;
+    width: 65%;
   }
   .trialForm .inputsContainer .sendButtonContainer {
     width: 30%;
@@ -403,6 +415,138 @@ footer .secondaryContainer {
   .trialForm .inputsContainer .sendButtonContainer .button {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+.tshirtForm {
+  background-color: #eeeeee;
+  border-radius: 20px;
+  padding: 15px;
+  padding-top: 7.5vh;
+  margin: 5vh 30px;
+  position: relative;
+}
+.tshirtForm .getTshirt {
+  width: 30vw;
+  position: absolute;
+  top: -5%;
+  left: 60%;
+}
+.tshirtForm .inputsContainer {
+  margin-bottom: 15px;
+}
+.tshirtForm .inputsContainer > *:not(:first-child) {
+  margin-top: 15px;
+}
+.tshirtForm .inputsContainer .input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 5px;
+}
+.tshirtForm .inputsContainer .input label {
+  font-size: 0.6rem;
+  color: #6a6a6a;
+}
+.tshirtForm .inputsContainer .input input,
+.tshirtForm .inputsContainer .input textarea,
+.tshirtForm .inputsContainer .input select {
+  width: 100%;
+  border: none;
+  background-color: #d9d9d9;
+  color: #6a6a6a;
+  padding: 5px;
+  outline: none;
+}
+.tshirtForm .inputsContainer .input textarea {
+  resize: none;
+}
+.tshirtForm .inputsContainer .tshirtInputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.tshirtForm .inputsContainer .tshirtInputs input {
+  text-align: center;
+}
+.tshirtForm .inputsContainer .tshirtInputs .input {
+  min-width: 45%;
+}
+.tshirtForm .inputsContainer .shippingNotice {
+  margin-top: 15px;
+  color: #9a9a9a;
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.tshirtForm .button {
+  min-width: 65%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+}
+.tshirtForm .sendButtonContainer p {
+  font-size: 0.8rem;
+  color: #6a6a6a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.tshirtForm .sendButtonContainer .button--outline {
+  color: #f7941e;
+}
+.tshirtForm .sendButtonContainer .error {
+  font-size: 0.8rem;
+  color: rgb(244, 64, 64);
+}
+@media (min-width: 768px) {
+  .tshirtForm {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    padding-left: 5%;
+    padding-top: 15px;
+    gap: 30px;
+  }
+  .tshirtForm .getTshirt {
+    width: 10vw;
+    position: absolute;
+    top: -7.5%;
+    left: 92.5%;
+  }
+  .tshirtForm .inputsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 2.5%;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-bottom: 0;
+  }
+  .tshirtForm .inputsContainer .input,
+  .tshirtForm .inputsContainer .tshirtInputs,
+  .tshirtForm .inputsContainer .shippingNotice {
+    width: 45%;
+  }
+  .tshirtForm .inputsContainer > :nth-child(2) {
+    margin-top: 0;
+  }
+  .tshirtForm .sendButtonContainer {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+  }
+  .tshirtForm .sendButtonContainer .button {
+    width: 100%;
+    padding: 10px;
+    transform: none;
+    position: static;
   }
 }
 
@@ -425,6 +569,7 @@ footer .secondaryContainer {
   background-image: url("/assets/picture/heroMobile.jpg");
   background-size: cover;
   color: #3a3a3a;
+  position: relative;
 }
 .home .section1 h2 {
   font-size: 2rem;
@@ -447,6 +592,12 @@ footer .secondaryContainer {
 }
 .home .section1 .buttonContainer .button--outline {
   color: #3a3a3a;
+}
+.home .section1 .getTshirt {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 40vw;
 }
 @media (min-width: 1024px) {
   .home .section1 {
@@ -472,6 +623,9 @@ footer .secondaryContainer {
   }
   .home .section1 .buttonContainer .button {
     width: 50%;
+  }
+  .home .section1 .getTshirt {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
@@ -756,8 +910,7 @@ footer .secondaryContainer {
   color: white;
   position: relative;
 }
-.home .section6 video,
-.home .section6 iframe {
+.home .section6 video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -802,8 +955,7 @@ footer .secondaryContainer {
     width: 50%;
     padding-left: 10vw;
   }
-  .home .section6 video,
-  .home .section6 iframe {
+  .home .section6 video {
     position: absolute;
     z-index: 1;
     inset: 0;
@@ -922,6 +1074,85 @@ footer .secondaryContainer {
   .home .section8 {
     background: url("/assets/picture/sawdustPc.jpg");
     padding: 15vh 15vw;
+  }
+}
+.home .section9 {
+  background-image: url("/assets/picture/tshirtBackground.png");
+  background-size: cover;
+  margin-top: 0;
+}
+.home .section9 .banner {
+  width: 100%;
+}
+.home .section9 .titles {
+  padding: 15px 30px;
+  padding-bottom: 45px;
+}
+.home .section9 .titles h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.home .section9 .titles p {
+  font-size: 0.8rem;
+  color: #6a6a6a;
+}
+.home .section9 .card {
+  scroll-snap-align: center;
+  position: relative;
+}
+.home .section9 .card img {
+  width: 80vw;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.home .section9 .card p {
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  top: 90%;
+  color: #636363;
+  font-size: 0.8rem;
+}
+.home .section9 .imagesContainer {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .home .section9 > :not(:first-child) {
+    margin: 30px 20vw;
+  }
+  .home .section9 .titles {
+    padding: 0;
+  }
+  .home .section9 .titles h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .home .section9 .carouselContainer {
+    display: none;
+  }
+  .home .section9 .imagesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15vh;
+  }
+  .home .section9 .imagesContainer .tshirt {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .home .section9 .imagesContainer .tshirt img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .home .section9 .imagesContainer .tshirt p {
+    font-size: 0.8rem;
   }
 }
 

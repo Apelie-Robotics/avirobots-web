@@ -35,4 +35,5 @@ To do this, you should:
 ```
 VITE_TRIAL_FORM_ID="your_id"
 VITE_CONTACT_FORM_ID="your_id"
+VITE_TSHIRT_FORM_ID="your_id"
 ```

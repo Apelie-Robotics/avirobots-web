@@ -13,6 +13,12 @@ export { default as validationPc } from "/assets/picture/validationPc.png";
 export { default as app } from "/assets/picture/app.png";
 export { default as poultryScience } from "/assets/picture/poultryScience.jpg";
 export { default as robotAndApp } from "/assets/picture/robotAndApp.png";
+export { default as getTshirt1 } from "/assets/picture/getTshirt1.png";
+export { default as getTshirt2 } from "/assets/picture/getTshirt2.png";
+export { default as tshirtBanner } from "/assets/picture/tshirtBanner.png";
+export { default as tshirtBannerMobile } from "/assets/picture/tshirtBannerMobile.png";
+export { default as tshirt1 } from "/assets/picture/tshirt1.jpg";
+export { default as tshirt2 } from "/assets/picture/tshirt2.jpg";
 
 // Supporters
 export { default as supporter1 } from "/assets/picture/supporter1.png";

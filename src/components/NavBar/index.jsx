@@ -1,13 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import MobileNavBar from "../MobileNavBar";
-import { aviRobotsLogo } from "../../assets";
+import { aviRobotsLogo, getTshirt1 } from "../../assets";
 
 const NavBar = () => {
   return (
     <>
       <MobileNavBar />
       <nav className="navPc">
-        <Link to="/">
+        <Link to="/" className="logo">
           <img src={aviRobotsLogo} alt="AviRobots logo" />
         </Link>
         <div className="linkContainer">
@@ -19,6 +19,13 @@ const NavBar = () => {
           <NavLink to="/us">About us</NavLink>
           <NavLink to="/contact">Contact us</NavLink>
         </div>
+        <a href="/#tshirt" className="getTshirt">
+          <img
+            src={getTshirt1}
+            alt="Get your free Avirobots t-shirt"
+            className="getTshirt"
+          />
+        </a>
       </nav>
     </>
   );
