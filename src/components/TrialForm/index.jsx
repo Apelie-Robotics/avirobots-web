@@ -134,7 +134,7 @@ const TrialForm = () => {
             </>
           ) : (
             <>
-              {error && <p className="error">Ha ocurrido un error.</p>}
+              {error && <p className="error">An error occurred.</p>}
               <button
                 type="submit"
                 className="button button--solid"

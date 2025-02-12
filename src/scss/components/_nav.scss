@@ -9,9 +9,13 @@
   background-color: map-get($colors, "light");
 
   padding: 15px 15%;
+  padding-right: 20%;
 
-  img {
-    width: 20%;
+  .logo {
+    width: 10%;
+    img {
+      width: 100%;
+    }
   }
 
   .linkContainer {
@@ -27,6 +31,15 @@
     .trialLink {
       color: map-get($colors, "primary");
       font-style: italic;
+    }
+  }
+
+  .getTshirt {
+    position: absolute;
+    left: calc(100% - 10vw);
+    top: 35%;
+    img {
+      width: 10vw;
     }
   }
 }
