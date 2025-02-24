@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 import { getTshirt2 } from "../../assets";
 
 const TshirtForm = () => {
-  const [state, handleSubmit, reset] = useForm(
-    import.meta.env.VITE_TSHIRT_FORM_ID
-  );
+  const [state, handleSubmit, reset] = useForm(import.meta.env.VITE_TSHIRT_FORM_ID);
   const [error, setError] = useState(false);
 
   useEffect(() => {
