@@ -140,13 +140,8 @@ const Home = () => {
         ></video>
         <div className="contentContainer">
           <div className="titles">
-            <h2>
-              The Robot's Eyes <b>in Real-Time</b>
-            </h2>
-            <p>
-              The Flocker Robot is operating NOW, click below and see through
-              his eyes.
-            </p>
+            <h2>The Robot's Eyes <b>in Real-Time</b></h2>
+            <p>The Flocker Robot is operating NOW, click below and see through his eyes.</p>
           </div>
         </div>
       </section>
@@ -203,54 +198,34 @@ const Home = () => {
         </div>
       </section>
 
-      <section
-        id="video"
-        className={`section6 isPlaying` /*${isVideoPlaying && "isPlaying"}*/}
-      >
+      <section id="video" className={`section6 isPlaying`/*${isVideoPlaying && "isPlaying"}*/}>
         <div className="text">
-          <h2>
-            An intelligent robot to get rid of <i>tedious</i> or{" "}
-            <i>repetitive</i> tasks.
-          </h2>
-          <p>
-            We apply <b>robotics and AI</b> to enhance the poultry industry.
-          </p>
+          <h2>An intelligent robot to get rid of <i>tedious</i> or{" "} <i>repetitive</i> tasks.</h2>
+          <p>We apply <b>robotics and AI</b> to enhance the poultry industry.</p>
         </div>
         <iframe
           loading="lazy"
           src="https://www.youtube.com/embed/tuXtUnuKQIg?enablejsapi=1&playlist=tuXtUnuKQIg&loop=1&autoplay=1&mute=1&playsinline=1&rel=0"
-          frameBorder="0"
+          frameborder="0"
           allow="autoplay; encrypted-media"
         ></iframe>
       </section>
 
       <section className="section7">
         <h2>
-          Our colaboration with{" "}
-          <a href="https://www.linkedin.com/company/conicet/" target="_blank">
-            CONICET
-          </a>
-          , published in the Poultry Science Magazine, an official journal of
-          the{" "}
-          <a
-            href="https://www.linkedin.com/company/poultry-science-association/"
-            target="_blank"
-          >
-            Poultry Science Association
-          </a>
-          .
+          Our colaboration with{' '}<a href="https://www.linkedin.com/company/conicet/" target="_blank">CONICET</a>,
+          published in the Poultry Science Magazine, an official journal of the{' '}
+          <a href="https://www.linkedin.com/company/poultry-science-association/" target="_blank">Poultry Science Association</a>.
         </h2>
         <div className="content">
           <img src={boots} alt="Boots" className="boots pc" loading="lazy" />
           <div className="middleContainer">
             <div className="text">
               <p>
-                This paper serves as an important{" "}
-                <b>milestone in recognizing the capabilities of our robot</b>,
-                AviSense, within the poultry environment. It opens up a universe
-                of potential studies, from exploring further benefits such as
-                improved feed conversion and meat quality to potentially
-                reducing mortality.
+                This paper serves as an important <b>milestone in recognizing the capabilities of our robot</b>,
+                AviSense, within the poultry environment.
+                It opens up a universe of potential studies,
+                from exploring further benefits such as improved feed conversion and meat quality to potentially reducing mortality.
               </p>
               <p>
                 Our first product is AviSense, an electric robot that{" "}
@@ -322,17 +297,7 @@ const Home = () => {
         </picture>
         <div className="titles">
           <h2>Get your free Avirobots t-shirt!</h2>
-          <p>
-            Currently available only in{" "}
-            <b>
-              <i>Canada</i>
-            </b>{" "}
-            and the{" "}
-            <b>
-              <i>USA</i>
-            </b>
-            .
-          </p>
+          <p>Currently available only in{" "}<b><i>Canada</i></b>{" "}and the{" "}<b><i>USA</i></b>.</p>
         </div>
         <CarouselMobile>
           <article className="card">
