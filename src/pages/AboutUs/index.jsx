@@ -61,17 +61,7 @@ const AboutUs = () => {
               <p className="hq">Arg Hq</p>
             </div>
           </article>
-          <article>
-            <picture>
-              <source srcSet={staff5pc} media="(min-width: 1024px)" />
-              <img src={staff5} alt="Eng. Mateo Giovagnoli" loading="eager" />
-            </picture>
-            <h3>Eng. Mateo <b>Giovagnoli</b></h3>
-            <div>
-              <p className="position">CTO</p>
-              <p className="hq">Arg Hq</p>
-            </div>
-          </article>
+        
           <article>
             <picture>
               <source srcSet={staff6pc} media="(min-width: 1024px)" />
